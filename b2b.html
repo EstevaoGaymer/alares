@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alares Empresas. Soluções corporativas, Link Dedicado, SD-WAN e PABX IP para o seu negócio não parar.">
+    <title>Alares Empresas | Infraestrutura Corporativa de Alto Desempenho</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-slate-950 text-slate-200 overflow-x-hidden selection:bg-amber-500 selection:text-slate-900">
+
+    <!-- MEGA HEADER CORPORATIVO (DARK THEME) -->
+    <nav class="fixed w-full z-[100] bg-slate-950/90 backdrop-blur-xl border-b border-white/10 transition-all duration-300 shadow-xl" aria-label="Navegação Corporativa">
+        <div class="max-w-[1440px] mx-auto px-8 h-24 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="text-4xl font-black tracking-tighter text-white group-hover:text-amber-500 transition-colors">alares</div>
+                <div class="hidden sm:block h-8 w-px bg-slate-700"></div>
+                <span class="hidden sm:block text-xs font-bold text-amber-500 tracking-widest uppercase border border-amber-500/30 px-3 py-1 rounded-full bg-amber-500/10">Empresas</span>
+            </a>
+
+            <div class="hidden lg:flex items-center gap-10 font-semibold text-slate-400">
+                <a href="index.html" class="hover:text-white transition-colors">Início</a>
+                <a href="planos.html" class="hover:text-white transition-colors">Para Casa</a>
+                <a href="b2b.html" class="text-white">Soluções Corporativas</a>
+                <a href="cobertura.html" class="hover:text-white transition-colors">Data Centers</a>
+                <a href="sobre.html" class="hover:text-white transition-colors">Institucional</a>
+            </div>
+
+            <div class="flex items-center gap-6">
+                <button class="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-900 px-8 py-3.5 rounded-full font-black shadow-[0_0_20px_rgba(245,158,11,0.3)] transition-all transform hover:scale-105 flex items-center gap-2">
+                    Falar com Especialista <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO CORPORATIVO: ENTRADA MAJESTOSA (MESH BACKGROUND) -->
+    <section class="min-h-screen flex items-center pt-24 pb-20 px-8 relative overflow-hidden bg-slate-950">
+        <!-- Efeito visual de fundo imponente -->
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center opacity-20 mix-blend-luminosity"></div>
+        <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-amber-600/10 rounded-full blur-[150px] pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#0050FF]/10 rounded-full blur-[150px] pointer-events-none"></div>
+        
+        <div class="max-w-[1440px] mx-auto w-full grid lg:grid-cols-2 gap-16 relative z-10 items-center">
+            
+            <div class="animate-triumphant">
+                <div class="inline-flex items-center gap-3 bg-white/5 border border-white/10 px-5 py-2 rounded-full mb-8 backdrop-blur-md">
+                    <span class="w-2.5 h-2.5 rounded-full bg-amber-500 animate-pulse shadow-[0_0_10px_#f59e0b]"></span>
+                    <span class="text-sm font-bold tracking-widest uppercase text-amber-400">SLA de 99.9% Garantido</span>
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-black text-white leading-[1.1] mb-8 tracking-tight">
+                    A espinha dorsal <br> da sua <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-600 drop-shadow-xl">operação.</span>
+                </h1>
+                <p class="text-xl text-slate-400 mb-10 leading-relaxed max-w-xl font-light">
+                    Links dedicados, redundância de rede e IP Fixo. Entregamos a estabilidade e a segurança que grandes negócios e indústrias exigem para crescer sem interrupções no Brasil inteiro.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#solucoes" class="bg-transparent border border-white/20 text-white font-bold px-10 py-5 rounded-2xl hover:bg-white/10 hover:border-white/40 backdrop-blur transition-all text-lg flex items-center gap-2">
+                        Explorar Portfólio <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Formulário de Lead B2B (Glassmorphism Dark) -->
+            <div class="glass-panel-dark p-10 rounded-[2.5rem] animate-slide-heavy w-full max-w-lg ml-auto border-amber-500/30 shadow-[0_0_50px_-12px_rgba(245,158,11,0.2)] relative hover-lift">
+                <div class="absolute -top-4 -right-4 bg-amber-500 text-slate-900 px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest shadow-lg transform rotate-6 border border-amber-300">
+                    Prioridade
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-2">Agende uma Consultoria</h3>
+                <p class="text-slate-400 text-sm mb-8 font-medium">Nossos engenheiros desenham a topologia ideal para a sua empresa sem compromisso.</p>
+                
+                <form id="form-b2b" class="space-y-6">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Nome Completo</label>
+                        <input type="text" id="b2b-nome" class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white outline-none focus:border-amber-500 focus:bg-white/10 transition-colors" placeholder="Ex: Diretor de TI">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Empresa / CNPJ</label>
+                        <input type="text" id="b2b-empresa" class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white outline-none focus:border-amber-500 focus:bg-white/10 transition-colors" placeholder="Sua Indústria S.A.">
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Telefone (DDD)</label>
+                            <input type="text" id="b2b-telefone" class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white outline-none focus:border-amber-500 focus:bg-white/10 transition-colors" placeholder="(00) 00000-0000">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Necessidade</label>
+                            <select class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white outline-none focus:border-amber-500 focus:bg-white/10 transition-colors appearance-none">
+                                <option class="text-slate-900">Link Dedicado</option>
+                                <option class="text-slate-900">Telefonia PABX IP</option>
+                                <option class="text-slate-900">Rede SD-WAN</option>
+                                <option class="text-slate-900">Proteção Anti-DDoS</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-900 font-black py-5 rounded-xl text-lg hover:shadow-[0_0_20px_rgba(245,158,11,0.4)] transition-all mt-4 flex items-center justify-center gap-2">
+                        Solicitar Contato Imediato
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOVA SEÇÃO: INFRAESTRUTURA DE MISSÃO CRÍTICA (GALERIA) -->
+    <section class="py-24 px-8 bg-slate-900 border-t border-white/5 relative z-20">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black text-white mb-6">Infraestrutura de <span class="text-amber-500">Missão Crítica</span></h2>
+                <p class="text-xl text-slate-400 max-w-3xl mx-auto font-medium">Nossa rede não depende de terceiros. Controlamos cada poste, cada fibra e cada roteador de borda para garantir que a sua empresa nunca fique offline.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="h-[350px] rounded-[2.5rem] overflow-hidden relative group shadow-2xl border border-white/10">
+                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" alt="Data Center Tier III" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/50 to-transparent"></div>
+                    <div class="absolute bottom-8 left-8">
+                        <i class="fa-solid fa-server text-3xl text-amber-500 mb-2"></i>
+                        <h3 class="text-2xl font-black text-white">Data Centers Regionais</h3>
+                    </div>
+                </div>
+                <div class="md:col-span-2 h-[350px] rounded-[2.5rem] overflow-hidden relative group shadow-2xl border border-white/10">
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80" alt="Backbone Óptico" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/50 to-transparent"></div>
+                    <div class="absolute bottom-8 left-8">
+                        <i class="fa-solid fa-network-wired text-3xl text-amber-500 mb-2"></i>
+                        <h3 class="text-2xl font-black text-white">+25.000km de Backbone Próprio</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ECOSSISTEMA DE SOLUÇÕES AVANÇADAS (COM IMAGENS) -->
+    <section id="solucoes" class="py-32 px-8 bg-slate-950 relative border-t border-white/5">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="text-center mb-20">
+                <span class="text-amber-500 font-bold tracking-widest uppercase text-sm mb-4 block border border-amber-500/30 px-4 py-1 rounded-full inline-block bg-amber-500/10">Portfólio Técnico</span>
+                <h2 class="text-4xl md:text-6xl font-black text-white mb-6">Soluções Corporativas <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-600">360º</span></h2>
+                <p class="text-xl text-slate-400 max-w-3xl mx-auto font-light">Vamos muito além da conectividade básica. Entregamos um ecossistema completo para modernizar, interligar e proteger os dados do seu negócio.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Solução 1: Link Dedicado -->
+                <div class="glass-panel-dark rounded-[2.5rem] border border-white/10 hover:border-amber-500/50 transition-all hover-lift overflow-hidden flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80" alt="Link Dedicado IP" class="w-full h-56 object-cover opacity-70 border-b border-white/10">
+                    <div class="p-10 relative">
+                        <div class="absolute -top-10 right-10 w-20 h-20 bg-slate-900 rounded-2xl flex items-center justify-center border border-amber-500/30 shadow-lg">
+                            <i class="fa-solid fa-server text-4xl text-amber-500"></i>
+                        </div>
+                        <h3 class="text-3xl font-black text-white mb-4">Link Dedicado IP</h3>
+                        <p class="text-slate-400 leading-relaxed mb-6 text-lg">Banda larga 100% garantida, simétrica (upload igual ao download) e sem franquia. Ideal para servidores em nuvem, ERPs pesados e operações 24/7. Inclui blocos de IP Fixo.</p>
+                        <ul class="space-y-3 text-slate-300 font-medium">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Banda 100% Simétrica</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Monitoramento Proativo NOC</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Solução 2: SD-WAN -->
+                <div class="glass-panel-dark rounded-[2.5rem] border border-white/10 hover:border-amber-500/50 transition-all hover-lift overflow-hidden flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80" alt="Redes SD-WAN" class="w-full h-56 object-cover opacity-70 border-b border-white/10">
+                    <div class="p-10 relative">
+                        <div class="absolute -top-10 right-10 w-20 h-20 bg-slate-900 rounded-2xl flex items-center justify-center border border-amber-500/30 shadow-lg">
+                            <i class="fa-solid fa-network-wired text-4xl text-amber-500"></i>
+                        </div>
+                        <h3 class="text-3xl font-black text-white mb-4">Redes SD-WAN</h3>
+                        <p class="text-slate-400 leading-relaxed mb-6 text-lg">Interligue matriz e filiais com inteligência. O SD-WAN da Alares roteia o tráfego da rede de forma dinâmica, priorizando aplicações críticas como vídeo e voz.</p>
+                        <ul class="space-y-3 text-slate-300 font-medium">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Túneis VPN Criptografados</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Redução drástica de custos com MPLS</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Solução 3: PABX -->
+                <div class="glass-panel-dark rounded-[2.5rem] border border-white/10 hover:border-amber-500/50 transition-all hover-lift overflow-hidden flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80" alt="PABX IP" class="w-full h-56 object-cover opacity-70 border-b border-white/10">
+                    <div class="p-10 relative">
+                        <div class="absolute -top-10 right-10 w-20 h-20 bg-slate-900 rounded-2xl flex items-center justify-center border border-amber-500/30 shadow-lg">
+                            <i class="fa-solid fa-headset text-4xl text-amber-500"></i>
+                        </div>
+                        <h3 class="text-3xl font-black text-white mb-4">PABX IP e Telefonia SIP</h3>
+                        <p class="text-slate-400 leading-relaxed mb-6 text-lg">Revolucione a comunicação do seu time. Plataforma de telefonia na nuvem com gravação de chamadas, URAs complexas e integração com CRMs corporativos.</p>
+                        <ul class="space-y-3 text-slate-300 font-medium">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Portabilidade de Números (0800)</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Relatórios em Tempo Real</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Solução 4: Anti-DDoS -->
+                <div class="glass-panel-dark rounded-[2.5rem] border border-white/10 hover:border-amber-500/50 transition-all hover-lift overflow-hidden flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?auto=format&fit=crop&w=800&q=80" alt="Segurança Cibernética" class="w-full h-56 object-cover opacity-70 border-b border-white/10">
+                    <div class="p-10 relative">
+                        <div class="absolute -top-10 right-10 w-20 h-20 bg-slate-900 rounded-2xl flex items-center justify-center border border-amber-500/30 shadow-lg">
+                            <i class="fa-solid fa-shield-virus text-4xl text-amber-500"></i>
+                        </div>
+                        <h3 class="text-3xl font-black text-white mb-4">Mitigação Anti-DDoS</h3>
+                        <p class="text-slate-400 leading-relaxed mb-6 text-lg">Sua operação blindada. Detectamos e desviamos tráfego malicioso na borda do nosso backbone, antes que atinjam os servidores da sua empresa.</p>
+                        <ul class="space-y-3 text-slate-300 font-medium">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Análise de Tráfego por IA</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Limpeza (Scrubbing) Transparente</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIAGNÓSTICO INTERATIVO DE INFRAESTRUTURA (JS INTACTO) -->
+    <section class="py-32 px-8 bg-gradient-to-br from-amber-600 via-amber-700 to-orange-900 text-slate-900 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+        <div class="absolute -left-40 top-0 w-96 h-96 bg-white/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-[1440px] mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
+            
+            <div class="animate-slide-heavy">
+                <span class="bg-slate-900 text-amber-400 px-5 py-2 rounded-full text-sm font-bold uppercase tracking-widest mb-6 inline-block shadow-lg border border-slate-700">Simulador de Topologia</span>
+                <h2 class="text-4xl md:text-6xl font-black mb-6 leading-tight text-white">Descubra a arquitetura ideal <br> para seu negócio.</h2>
+                <p class="text-xl text-amber-100 mb-10 leading-relaxed font-medium">
+                    Selecione os principais desafios de TI que sua empresa enfrenta hoje e descubra qual pacote tecnológico da Alares Empresas resolverá seu problema instantaneamente.
+                </p>
+                <!-- Imagem de Suporte ao lado do texto -->
+                <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=600&q=80" alt="Engenheiro de TI" class="rounded-[2rem] shadow-2xl border-4 border-amber-500/30 w-full max-w-md hidden lg:block">
+            </div>
+
+            <!-- Painel Interativo B2B (Lógica Mantida) -->
+            <div class="bg-slate-900 p-10 rounded-[3rem] shadow-[0_30px_60px_rgba(0,0,0,0.5)] text-white animate-slide-heavy border border-amber-500/30 hover-lift">
+                <h3 class="text-2xl font-black mb-6 border-b border-slate-700 pb-4 text-amber-400">Qual a sua maior necessidade hoje?</h3>
+                
+                <div class="space-y-4 mb-8">
+                    <label class="flex items-center justify-between p-5 border border-slate-700 rounded-2xl cursor-pointer hover:bg-slate-800 transition-colors group">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center group-hover:bg-amber-500/20 transition-colors">
+                                <i class="fa-solid fa-building text-2xl text-slate-400 group-hover:text-amber-400"></i>
+                            </div>
+                            <span class="font-bold text-lg">Interligar múltiplas filiais de forma segura</span>
+                        </div>
+                        <input type="checkbox" value="sdwan" class="calc-b2b w-6 h-6 accent-amber-500 cursor-pointer">
+                    </label>
+                    
+                    <label class="flex items-center justify-between p-5 border border-slate-700 rounded-2xl cursor-pointer hover:bg-slate-800 transition-colors group">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center group-hover:bg-amber-500/20 transition-colors">
+                                <i class="fa-solid fa-cloud-arrow-up text-2xl text-slate-400 group-hover:text-amber-400"></i>
+                            </div>
+                            <span class="font-bold text-lg">Estabilidade para sistemas em Nuvem / ERPs</span>
+                        </div>
+                        <input type="checkbox" value="link" class="calc-b2b w-6 h-6 accent-amber-500 cursor-pointer">
+                    </label>
+
+                    <label class="flex items-center justify-between p-5 border border-slate-700 rounded-2xl cursor-pointer hover:bg-slate-800 transition-colors group">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center group-hover:bg-amber-500/20 transition-colors">
+                                <i class="fa-solid fa-phone-volume text-2xl text-slate-400 group-hover:text-amber-400"></i>
+                            </div>
+                            <span class="font-bold text-lg">Reduzir custos com telefonia e call center</span>
+                        </div>
+                        <input type="checkbox" value="pabx" class="calc-b2b w-6 h-6 accent-amber-500 cursor-pointer">
+                    </label>
+                </div>
+
+                <!-- Resultado Dinâmico -->
+                <div class="bg-slate-950 rounded-2xl p-8 text-left border border-amber-500/30 relative overflow-hidden shadow-inner">
+                    <div class="absolute right-0 top-0 w-32 h-32 bg-amber-500/10 rounded-bl-full"></div>
+                    <p class="text-sm font-bold text-amber-500 uppercase tracking-widest mb-4"><i class="fa-solid fa-microchip mr-2"></i> Diagnóstico da Engenharia</p>
+                    <h4 id="resultado-b2b-titulo" class="text-3xl font-black text-white mb-3">Selecione uma opção acima</h4>
+                    <p id="resultado-b2b-texto" class="text-slate-400 font-medium text-lg leading-relaxed">Aguardando a seleção do escopo do projeto para exibir a recomendação técnica estruturada.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- LÓGICA JAVASCRIPT DA CALCULADORA B2B EMBUTIDA (INTACTA) -->
+    <script>
+        const b2bCheckboxes = document.querySelectorAll('.calc-b2b');
+        const resTitulo = document.getElementById('resultado-b2b-titulo');
+        const resTexto = document.getElementById('resultado-b2b-texto');
+
+        b2bCheckboxes.forEach(box => {
+            box.addEventListener('change', () => {
+                let escolhas = [];
+                b2bCheckboxes.forEach(b => { if(b.checked) escolhas.push(b.value); });
+
+                if(escolhas.length === 0) {
+                    resTitulo.innerText = "Selecione uma opção acima";
+                    resTexto.innerText = "Aguardando a seleção do escopo do projeto para exibir a recomendação técnica estruturada.";
+                } else if (escolhas.includes('sdwan') && escolhas.includes('link') && escolhas.includes('pabx')) {
+                    resTitulo.innerText = "Solução Full Corporate 360º";
+                    resTexto.innerText = "A topologia perfeita! Interligamos suas filiais via SD-WAN sobre nosso Link Dedicado Ultra, e migramos toda a sua comunicação para o PABX Cloud. Redução de custos e gestão centralizada.";
+                } else if (escolhas.includes('sdwan')) {
+                    resTitulo.innerText = "Alares SD-WAN + Link Dedicado";
+                    resTexto.innerText = "Substitua links MPLS caros por SD-WAN. Criamos túneis criptografados entre suas unidades, garantindo segurança e roteamento inteligente do tráfego corporativo.";
+                } else if (escolhas.includes('link')) {
+                    resTitulo.innerText = "Link Dedicado Alta Capacidade";
+                    resTexto.innerText = "100% de garantia de banda simétrica com SLA de 99.9%. Seus ERPs em nuvem (SAP, TOTVS) rodarão sem nenhum gargalo ou oscilação de latência.";
+                } else if (escolhas.includes('pabx')) {
+                    resTitulo.innerText = "PABX IP Cloud Avançado";
+                    resTexto.innerText = "Acabe com a infraestrutura física de telefonia. Entregamos ramais via app, gravação de chamadas em nuvem e URAs inteligentes para profissionalizar seu atendimento.";
+                }
+            });
+        });
+    </script>
+
+    <!-- DESTAQUE REGIONAL E PROVA SOCIAL B2B (COM IMAGEM) -->
+    <section class="py-32 px-8 bg-slate-950 border-t border-white/10">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-amber-500 font-bold tracking-widest uppercase text-sm mb-4 block border border-amber-500/30 px-4 py-1 rounded-full inline-block bg-amber-500/10">Parceria Estratégica</span>
+                <h2 class="text-4xl md:text-5xl font-black text-white mb-6">O Motor Tecnológico das <span class="text-amber-500">Grandes Indústrias</span></h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center text-left">
+                <!-- Imagem Industrial -->
+                <div class="relative rounded-[3rem] overflow-hidden shadow-[0_0_50px_rgba(245,158,11,0.15)] border border-white/10 hover-lift h-[500px]">
+                    <img src="https://images.unsplash.com/photo-1586528116311-ad8ed79be264?auto=format&fit=crop&w=800&q=80" alt="Indústria e Logística" class="w-full h-full object-cover opacity-80">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent p-10 flex flex-col justify-end">
+                        <i class="fa-solid fa-industry text-5xl text-amber-500 mb-4"></i>
+                        <h3 class="text-3xl font-black text-white leading-tight">Operando no coração do Sul de Minas e São Paulo.</h3>
+                    </div>
+                </div>
+
+                <div>
+                    <p class="text-slate-400 text-lg leading-relaxed mb-6 font-medium">
+                        A Alares entende o nível de criticidade das operações de manufatura, logística e agronegócio. É por isso que possuímos forte atuação em praças vitais da economia brasileira.
+                    </p>
+                    <p class="text-slate-400 text-lg leading-relaxed mb-10 font-medium">
+                        De grandes corporações na capital paulista às imensas plantas fabris no eixo rodoviário de <strong>Pouso Alegre, Extrema e Varginha</strong>, nosso anel óptico garante que robôs, sistemas logísticos e docas permaneçam online com latência próxima a zero.
+                    </p>
+
+                    <!-- Depoimento B2B Premium -->
+                    <div class="glass-panel-dark p-8 rounded-[2rem] border border-white/10 relative overflow-hidden shadow-2xl hover:border-amber-500/50 transition-colors">
+                        <i class="fa-solid fa-quote-right text-6xl text-white/5 absolute top-4 right-6"></i>
+                        <div class="flex text-amber-500 mb-4 text-sm">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-lg text-slate-300 mb-6 font-medium italic leading-relaxed relative z-10">
+                            "Antes da Alares, sofríamos com paradas constantes de link que travavam nosso faturamento no centro de distribuição em Pouso Alegre. Desde a migração para o Link Dedicado com anel de redundância, nosso uptime está em 100%. Suporte espetacular."
+                        </p>
+                        <div class="flex items-center gap-4 border-t border-white/10 pt-4">
+                            <div class="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center text-xl font-bold text-amber-500 border border-amber-500/30">TI</div>
+                            <div>
+                                <h4 class="font-bold text-white">Diretor de Tecnologia</h4>
+                                <p class="text-xs text-amber-500 font-bold uppercase tracking-widest">Indústria Logística Nacional</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MEGA FOOTER INTACTO (DARK/CORPORATIVO) -->
+    <footer class="bg-slate-950 text-slate-400 pt-24 pb-10 border-t border-white/10 relative overflow-hidden">
+        <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-amber-600 via-amber-400 to-[#0050FF]"></div>
+        
+        <div class="max-w-[1440px] mx-auto px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16 relative z-10">
+            <div class="lg:col-span-2">
+                <div class="text-4xl font-black tracking-tighter text-white mb-6">alares</div>
+                <p class="text-lg leading-relaxed mb-8 max-w-sm">Levando internet de ultravelocidade, tecnologia corporativa e conectividade premium para o desenvolvimento de negócios e indústrias no Brasil inteiro.</p>
+                <div class="flex items-center gap-4">
+                    <a href="#" class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center hover:bg-amber-500 hover:text-slate-900 transition-all text-xl" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-lg mb-6 uppercase tracking-widest">Para Você</h4>
+                <ul class="space-y-4 font-medium">
+                    <li><a href="planos.html" class="hover:text-white hover:pl-2 transition-all">Planos Residenciais</a></li>
+                    <li><a href="suporte.html" class="hover:text-white hover:pl-2 transition-all">2ª Via de Fatura</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-lg mb-6 uppercase tracking-widest">A Empresa</h4>
+                <ul class="space-y-4 font-medium">
+                    <li><a href="sobre.html" class="hover:text-white hover:pl-2 transition-all">Nossa História</a></li>
+                    <li><a href="cobertura.html" class="hover:text-white hover:pl-2 transition-all">Data Centers</a></li>
+                    <li><a href="b2b.html" class="text-amber-500 font-bold hover:pl-2 transition-all">Alares Empresas</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-lg mb-6 uppercase tracking-widest">Atendimento VIP Corporativo</h4>
+                <ul class="space-y-4 font-medium">
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-headset text-amber-500 mt-1"></i><div><span class="block text-white font-bold">NOC 24/7 Exclusivo</span>0800 000 0000</div></li>
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-envelope text-amber-500 mt-1 text-lg"></i><div><span class="block text-white font-bold">Contato Comercial</span>empresas@alares.com.br</div></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-[1440px] mx-auto px-8 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm font-medium">
+            <p>&copy; 2026 Alares Internet S.A. Todos os direitos reservados. Operações Corporativas.</p>
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-white transition-colors">SLA Corporativo</a>
+                <a href="#" class="hover:text-white transition-colors">Termos LGPD</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WIDGET FLUTUANTE B2B (AMBER) -->
+    <div class="fixed bottom-8 right-8 z-[100] flex flex-col gap-4">
+        <button id="btn-back-to-top" class="w-12 h-12 bg-slate-800 text-white rounded-full shadow-xl flex items-center justify-center hover:bg-amber-500 hover:text-slate-900 hover:-translate-y-1 transition-all opacity-0 pointer-events-none translate-y-4 duration-300">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+        <a href="suporte.html" class="w-16 h-16 bg-gradient-to-r from-amber-500 to-amber-600 text-slate-900 rounded-full shadow-[0_0_30px_rgba(245,158,11,0.5)] flex items-center justify-center text-3xl hover:scale-110 transition-all relative group">
+            <div class="absolute inset-0 bg-amber-500 rounded-full animate-ping opacity-30"></div>
+            <i class="fa-brands fa-whatsapp relative z-10"></i>
+        </a>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

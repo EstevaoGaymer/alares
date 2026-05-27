@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Central de Suporte Alares. Autoatendimento, 2ª via de fatura, status da rede e soluções rápidas.">
+    <title>Alares | Central de Ajuda e Autoatendimento</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-slate-50 text-slate-900 overflow-x-hidden selection:bg-[#0050FF] selection:text-white">
+
+    <!-- MEGA HEADER PREMIUM -->
+    <nav class="fixed w-full z-[100] bg-white/90 backdrop-blur-md border-b border-blue-100 shadow-sm transition-all duration-300" aria-label="Navegação Principal">
+        <div class="max-w-[1440px] mx-auto px-8 h-24 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group cursor-pointer" aria-label="Página Inicial Alares">
+                <div class="text-4xl font-black tracking-tighter text-[#0050FF] group-hover:text-[#0035A8] transition-colors">alares</div>
+                <div class="hidden sm:block h-8 w-px bg-slate-300"></div>
+                <span class="hidden sm:block text-xs font-bold text-slate-500 tracking-widest uppercase bg-slate-100 px-3 py-1 rounded-full border border-slate-200">Autoatendimento</span>
+            </a>
+
+            <div class="hidden lg:flex items-center gap-10 font-semibold text-slate-600">
+                <a href="index.html" class="hover:text-[#0050FF] transition-colors">Início</a>
+                <a href="planos.html" class="hover:text-[#0050FF] transition-colors">Planos</a>
+                <a href="b2b.html" class="hover:text-[#0050FF] transition-colors">Empresas</a>
+                <a href="cobertura.html" class="hover:text-[#0050FF] transition-colors">Cobertura</a>
+                <a href="sobre.html" class="hover:text-[#0050FF] transition-colors">Institucional</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button class="bg-slate-900 hover:bg-black text-white px-8 py-3.5 rounded-full font-black shadow-[0_10px_20px_-10px_rgba(0,0,0,0.5)] transition-all transform hover:scale-105 flex items-center gap-2">
+                    <i class="fa-regular fa-user"></i> Login do Cliente
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SUPORTE (ENTRADA TRIUNFAL E MESH) -->
+    <section class="pt-40 pb-32 px-8 relative overflow-hidden mesh-bg">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center opacity-10 mix-blend-screen"></div>
+
+        <div class="max-w-[1440px] mx-auto text-center relative z-10 animate-triumphant text-white">
+            <div class="inline-flex items-center gap-2 glass-panel-dark border border-white/20 px-5 py-2 rounded-full mb-6">
+                <i class="fa-solid fa-headset text-green-400"></i>
+                <span class="text-xs font-bold tracking-widest uppercase text-white">Central de Resoluções Rápidas</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-black mb-6 tracking-tight">Como podemos te <br> <span class="text-gradient-alares drop-shadow-2xl">ajudar</span> hoje?</h1>
+            <p class="text-xl text-blue-100 max-w-2xl mx-auto font-medium mb-12 leading-relaxed">
+                Emita sua segunda via, verifique a saúde da sua rede ou tire suas dúvidas rapidamente através de nossa inteligência de autoatendimento.
+            </p>
+            
+            <!-- Barra de Busca Gigante (Glassmorphism) -->
+            <div class="max-w-3xl mx-auto glass-panel p-2 rounded-2xl flex flex-col sm:flex-row items-center gap-3 shadow-[0_30px_60px_-15px_rgba(0,80,255,0.3)] border-4 border-white/20 relative z-20 hover:border-white/40 transition-all">
+                <i class="fa-solid fa-magnifying-glass text-[#0050FF] text-2xl pl-4 hidden sm:block"></i>
+                <input type="text" placeholder="Ex: A luz vermelha LOS está piscando..." class="w-full py-4 px-4 bg-transparent text-slate-800 text-lg outline-none font-medium placeholder-slate-500">
+                <button class="bg-[#FF6B00] hover:bg-[#e66000] text-white font-black px-10 py-5 rounded-xl transition-all w-full sm:w-auto whitespace-nowrap text-lg shadow-lg">
+                    Encontrar Solução
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATUS DA REDE (PAINEL CORPORATIVO) -->
+    <section class="py-12 px-8 relative z-20 -mt-16">
+        <div class="max-w-[1440px] mx-auto animate-slide-heavy">
+            <div class="glass-panel bg-white p-8 rounded-[2rem] shadow-2xl border border-slate-200 flex flex-col lg:flex-row items-center justify-between gap-8">
+                <div class="flex items-center gap-6">
+                    <div class="w-20 h-20 bg-green-50 text-green-500 rounded-[1.5rem] flex items-center justify-center text-3xl relative border border-green-100">
+                        <i class="fa-solid fa-satellite-dish relative z-10"></i>
+                        <div class="absolute inset-0 bg-green-400 rounded-[1.5rem] animate-ping opacity-20"></div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-black text-slate-900 mb-1">Status do Sistema</h3>
+                        <p class="text-slate-500 font-medium text-sm flex items-center gap-2">
+                            <i class="fa-solid fa-clock-rotate-left"></i> Atualizado em tempo real pelos nossos engenheiros
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap items-center justify-center lg:justify-end gap-4 w-full lg:w-auto">
+                    <div class="flex items-center gap-3 bg-slate-50 border border-slate-200 px-6 py-4 rounded-full shadow-sm hover-lift">
+                        <span class="w-3 h-3 bg-green-500 rounded-full shadow-[0_0_10px_#22c55e]"></span>
+                        <span class="font-bold text-slate-700">Backbone Fibra</span>
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-50 border border-slate-200 px-6 py-4 rounded-full shadow-sm hover-lift">
+                        <span class="w-3 h-3 bg-green-500 rounded-full shadow-[0_0_10px_#22c55e]"></span>
+                        <span class="font-bold text-slate-700">App Cliente</span>
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-50 border border-slate-200 px-6 py-4 rounded-full shadow-sm hover-lift">
+                        <span class="w-3 h-3 bg-green-500 rounded-full shadow-[0_0_10px_#22c55e]"></span>
+                        <span class="font-bold text-slate-700">Telefonia SIP</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CARDS DE ACESSO RÁPIDO GIGANTES (COM IMAGENS) -->
+    <section class="py-24 px-8 relative z-10 bg-slate-50">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-6">Acesso <span class="text-[#0050FF]">Rápido</span></h2>
+                <p class="text-xl text-slate-600 font-medium max-w-2xl mx-auto">Resolva as principais demandas da sua assinatura em poucos cliques, sem filas de espera.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Card 1 -->
+                <div class="glass-panel bg-white rounded-[2.5rem] shadow-lg border border-slate-200 hover-lift flex flex-col overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=600&q=80" alt="Fatura" class="w-full h-40 object-cover">
+                    <div class="p-8 flex-1 flex flex-col items-center text-center -mt-12 relative z-10">
+                        <div class="w-20 h-20 bg-blue-50 text-[#0050FF] rounded-3xl flex items-center justify-center text-3xl mb-6 shadow-lg border-4 border-white group-hover:bg-[#0050FF] group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-file-invoice-dollar"></i>
+                        </div>
+                        <h3 class="text-2xl font-black text-slate-800 mb-4">2ª Via de Fatura</h3>
+                        <p class="text-slate-500 font-medium leading-relaxed mb-6 flex-1">Acesse seus boletos ou o código PIX de forma rápida usando apenas o seu CPF/CNPJ.</p>
+                        <span class="text-[#0050FF] font-bold border-b-2 border-transparent group-hover:border-[#0050FF] pb-1 transition-all">Acessar Faturas</span>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass-panel bg-white rounded-[2.5rem] shadow-lg border border-slate-200 hover-lift flex flex-col overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1614064641913-6b7140414f70?auto=format&fit=crop&w=600&q=80" alt="Wi-Fi" class="w-full h-40 object-cover">
+                    <div class="p-8 flex-1 flex flex-col items-center text-center -mt-12 relative z-10">
+                        <div class="w-20 h-20 bg-green-50 text-green-500 rounded-3xl flex items-center justify-center text-3xl mb-6 shadow-lg border-4 border-white group-hover:bg-green-500 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-wifi"></i>
+                        </div>
+                        <h3 class="text-2xl font-black text-slate-800 mb-4">Configurar Wi-Fi</h3>
+                        <p class="text-slate-500 font-medium leading-relaxed mb-6 flex-1">Altere a senha, o nome da sua rede ou oculte o sinal do roteador com segurança total.</p>
+                        <span class="text-green-600 font-bold border-b-2 border-transparent group-hover:border-green-600 pb-1 transition-all">Ver Tutorial</span>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-panel bg-white rounded-[2.5rem] shadow-lg border border-slate-200 hover-lift flex flex-col overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80" alt="Velocidade" class="w-full h-40 object-cover">
+                    <div class="p-8 flex-1 flex flex-col items-center text-center -mt-12 relative z-10">
+                        <div class="w-20 h-20 bg-orange-50 text-[#FF6B00] rounded-3xl flex items-center justify-center text-3xl mb-6 shadow-lg border-4 border-white group-hover:bg-[#FF6B00] group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-gauge-high"></i>
+                        </div>
+                        <h3 class="text-2xl font-black text-slate-800 mb-4">Teste de Velocidade</h3>
+                        <p class="text-slate-500 font-medium leading-relaxed mb-6 flex-1">Meça o ping, download e upload diretamente nos nossos servidores locais de ultravelocidade.</p>
+                        <span class="text-[#FF6B00] font-bold border-b-2 border-transparent group-hover:border-[#FF6B00] pb-1 transition-all">Iniciar Teste</span>
+                    </div>
+                </div>
+
+                <!-- Card 4 (Destaque Dark) -->
+                <div class="glass-panel bg-slate-900 rounded-[2.5rem] shadow-2xl border border-slate-800 hover-lift flex flex-col overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=600&q=80" alt="WhatsApp" class="w-full h-40 object-cover opacity-60">
+                    <div class="absolute top-6 right-6 bg-green-500/20 border border-green-500 text-green-400 text-xs font-bold px-3 py-1 rounded-full animate-pulse z-20 flex items-center gap-2">
+                        <div class="w-2 h-2 bg-green-400 rounded-full"></div> Online
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col items-center text-center -mt-12 relative z-10">
+                        <div class="w-20 h-20 bg-slate-800 text-white rounded-3xl flex items-center justify-center text-4xl mb-6 shadow-lg border-4 border-slate-900 group-hover:bg-green-500 transition-colors">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <h3 class="text-2xl font-black text-white mb-4">Suporte Digital</h3>
+                        <p class="text-slate-400 font-medium leading-relaxed mb-6 flex-1">Fale com nossa equipe técnica ou financeira diretamente pelo WhatsApp Oficial Alares.</p>
+                        <span class="text-green-400 font-bold border-b-2 border-transparent group-hover:border-green-400 pb-1 transition-all">Chamar Agora</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- NOVA SEÇÃO: VÍDEOS TUTORIAIS -->
+    <section class="py-24 px-8 bg-white border-t border-slate-200">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-4">Aprenda na <span class="text-[#FF6B00]">Prática</span></h2>
+                    <p class="text-xl text-slate-600 font-medium max-w-2xl">Tutoriais em vídeo elaborados por nossos especialistas para facilitar o seu dia a dia.</p>
+                </div>
+                <a href="#" class="text-[#0050FF] font-bold hover:underline decoration-2 underline-offset-4 hidden md:block">Ver todos os tutoriais <i class="fa-solid fa-arrow-right ml-1"></i></a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Video 1 -->
+                <div class="group cursor-pointer">
+                    <div class="relative w-full h-64 rounded-[2rem] overflow-hidden shadow-lg mb-6 hover-lift">
+                        <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80" alt="Roteador" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/20 transition-colors"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-16 h-16 bg-white/30 backdrop-blur-md rounded-full flex items-center justify-center border border-white/50 text-white text-2xl group-hover:bg-[#FF6B00] group-hover:border-[#FF6B00] transition-colors shadow-xl">
+                                <i class="fa-solid fa-play ml-1"></i>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 right-4 bg-black/70 backdrop-blur px-3 py-1 rounded-lg text-white text-xs font-bold">02:15</div>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-[#0050FF] transition-colors">Como alterar a senha do seu Wi-Fi 6</h3>
+                    <p class="text-slate-500 font-medium">Passo a passo pelo App Alares ou pelo navegador.</p>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="group cursor-pointer">
+                    <div class="relative w-full h-64 rounded-[2rem] overflow-hidden shadow-lg mb-6 hover-lift">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80" alt="Pagamento Celular" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/20 transition-colors"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-16 h-16 bg-white/30 backdrop-blur-md rounded-full flex items-center justify-center border border-white/50 text-white text-2xl group-hover:bg-[#FF6B00] group-hover:border-[#FF6B00] transition-colors shadow-xl">
+                                <i class="fa-solid fa-play ml-1"></i>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 right-4 bg-black/70 backdrop-blur px-3 py-1 rounded-lg text-white text-xs font-bold">01:30</div>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-[#0050FF] transition-colors">Pagamento de Fatura via PIX</h3>
+                    <p class="text-slate-500 font-medium">Veja como emitir e pagar instantaneamente, evitando bloqueios.</p>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="group cursor-pointer">
+                    <div class="relative w-full h-64 rounded-[2rem] overflow-hidden shadow-lg mb-6 hover-lift">
+                        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80" alt="Otimização de Jogo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/20 transition-colors"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-16 h-16 bg-white/30 backdrop-blur-md rounded-full flex items-center justify-center border border-white/50 text-white text-2xl group-hover:bg-[#FF6B00] group-hover:border-[#FF6B00] transition-colors shadow-xl">
+                                <i class="fa-solid fa-play ml-1"></i>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 right-4 bg-black/70 backdrop-blur px-3 py-1 rounded-lg text-white text-xs font-bold">03:45</div>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-[#0050FF] transition-colors">Dicas para otimizar seu Ping e Latência</h3>
+                    <p class="text-slate-500 font-medium">Configurações avançadas para Gamers de Alta Performance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ (Perguntas Frequentes) INTERATIVO -->
+    <section class="py-24 px-8 bg-slate-100 border-t border-slate-200">
+        <div class="max-w-[1000px] mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-[#0050FF] font-bold tracking-widest uppercase text-sm mb-4 block">Base de Conhecimento</span>
+                <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-6">Perguntas Frequentes</h2>
+                <p class="text-xl text-slate-600 font-medium">Encontre as respostas técnicas e financeiras para as dúvidas mais comuns dos nossos assinantes.</p>
+            </div>
+            
+            <div class="space-y-6">
+                <!-- Accordion 1 (Integrado com JS) -->
+                <div class="faq-item bg-white border border-slate-200 rounded-2xl shadow-sm hover:shadow-lg transition-all overflow-hidden">
+                    <div class="faq-question flex items-center justify-between p-8 cursor-pointer bg-white select-none">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-red-50 text-red-500 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-circle-exclamation text-xl"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-slate-800">A internet caiu e a luz vermelha "LOS" está piscando no modem. O que fazer?</h4>
+                        </div>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-xl transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer hidden p-8 pt-0 text-slate-600 text-lg leading-relaxed bg-white border-t border-slate-100">
+                        A luz "LOS" (Loss of Signal) piscando em vermelho indica que o sinal ótico foi interrompido antes de chegar ao seu roteador. Isso geralmente ocorre por rompimento de cabo externo na rua ou se o cabo amarelo (patch cord) atrás do seu modem foi amassado ou desconectado. <strong>Verifique as conexões físicas dentro de casa. Se tudo estiver correto, abra um chamado urgente pelo nosso WhatsApp ou App, pois será necessário o envio de uma equipe técnica.</strong>
+                    </div>
+                </div>
+
+                <!-- Accordion 2 -->
+                <div class="faq-item bg-white border border-slate-200 rounded-2xl shadow-sm hover:shadow-lg transition-all overflow-hidden">
+                    <div class="faq-question flex items-center justify-between p-8 cursor-pointer bg-white select-none">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-blue-50 text-[#0050FF] flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-house-signal text-xl"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-slate-800">Como posso mudar a titularidade ou o endereço de instalação?</h4>
+                        </div>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-xl transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer hidden p-8 pt-0 text-slate-600 text-lg leading-relaxed bg-white border-t border-slate-100">
+                        Mudanças de endereço e de titularidade podem ser solicitadas diretamente pela <strong>Área do Cliente</strong> em nosso aplicativo ou site. Na mudança de endereço, nossa equipe fará uma verificação instantânea de viabilidade técnica para a nova residência e agendará a reinstalação dos equipamentos num prazo máximo de 48 horas úteis.
+                    </div>
+                </div>
+
+                <!-- Accordion 3 -->
+                <div class="faq-item bg-white border border-slate-200 rounded-2xl shadow-sm hover:shadow-lg transition-all overflow-hidden">
+                    <div class="faq-question flex items-center justify-between p-8 cursor-pointer bg-white select-none">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-green-50 text-green-500 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-qrcode text-xl"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-slate-800">Já paguei minha fatura via PIX, por que ainda consta como atrasada?</h4>
+                        </div>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-xl transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer hidden p-8 pt-0 text-slate-600 text-lg leading-relaxed bg-white border-t border-slate-100">
+                        Pagamentos realizados via PIX utilizando o QR Code oficial da fatura são compensados em até 5 minutos no nosso sistema. Caso o sinal tenha sido suspenso, ele retornará automaticamente. Se o bloqueio persistir, reinicie seu roteador da tomada. Pagamentos via código de barras convencional (Boleto) podem levar até 48 horas úteis para compensação bancária.
+                    </div>
+                </div>
+
+                <!-- Accordion 4 -->
+                <div class="faq-item bg-white border border-slate-200 rounded-2xl shadow-sm hover:shadow-lg transition-all overflow-hidden">
+                    <div class="faq-question flex items-center justify-between p-8 cursor-pointer bg-white select-none">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-purple-50 text-purple-500 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-gamepad text-xl"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-slate-800">Minha internet de 600 Mega está lenta no Wi-Fi. Qual o motivo?</h4>
+                        </div>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-xl transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer hidden p-8 pt-0 text-slate-600 text-lg leading-relaxed bg-white border-t border-slate-100">
+                        A velocidade contratada só pode ser aferida com máxima precisão através de um cabo de rede (RJ-45 Cat5e ou superior) conectado a um computador Gigabit. O Wi-Fi sofre interferências de paredes, espelhos, micro-ondas e até mesmo de redes de vizinhos. Para melhor desempenho, utilize sempre a rede <strong>5Ghz ou Wi-Fi 6</strong> do seu aparelho Alares, e mantenha-se próximo ao roteador para downloads pesados.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CANAIS DE ATENDIMENTO DIRETOS (COM IMAGEM DE EQUIPE) -->
+    <section class="py-24 px-8 bg-white border-t border-slate-200">
+        <div class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            <!-- Imagem e Manifesto da Equipe -->
+            <div class="relative rounded-[3rem] overflow-hidden shadow-2xl hover-lift">
+                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&q=80" alt="Equipe de Atendimento Alares" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent flex flex-col justify-end p-12">
+                    <h3 class="text-3xl font-black text-white mb-2">Pessoas cuidando de pessoas.</h3>
+                    <p class="text-slate-300 text-lg">Nosso suporte vai muito além de robôs. Contamos com um time humanizado pronto para entender o seu problema e agir rápido.</p>
+                </div>
+            </div>
+
+            <!-- Cards de Contato -->
+            <div class="space-y-6">
+                <div class="glass-panel p-8 rounded-[2rem] border border-slate-100 flex items-center gap-6 hover:shadow-xl transition-all">
+                    <div class="w-20 h-20 bg-blue-50 rounded-2xl flex items-center justify-center shrink-0 shadow-inner">
+                        <i class="fa-solid fa-phone-volume text-4xl text-[#0050FF]"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-black text-slate-900 mb-1">Central Telefônica</h3>
+                        <p class="text-slate-500 font-medium mb-2">Disponível 24 horas por dia para Suporte Técnico. Financeiro de Seg a Sex.</p>
+                        <div class="text-3xl font-black text-[#0050FF]">106 00</div>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-8 rounded-[2rem] border border-slate-100 flex items-center gap-6 hover:shadow-xl transition-all border-l-8 border-l-[#FF6B00]">
+                    <div class="w-20 h-20 bg-orange-50 rounded-2xl flex items-center justify-center shrink-0 shadow-inner">
+                        <i class="fa-solid fa-scale-balanced text-4xl text-[#FF6B00]"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-black text-slate-900 mb-1">Ouvidoria Oficial</h3>
+                        <p class="text-slate-500 font-medium mb-3">Não resolveu nos canais normais? A Ouvidoria garante seus direitos e acompanha o protocolo.</p>
+                        <a href="#" class="inline-block bg-white border-2 border-[#FF6B00] text-[#FF6B00] font-bold px-6 py-2 rounded-xl hover:bg-[#FF6B00] hover:text-white transition-colors">Abrir Manifestação</a>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-8 rounded-[2rem] border border-slate-100 flex items-center gap-6 hover:shadow-xl transition-all">
+                    <div class="w-20 h-20 bg-slate-100 rounded-2xl flex items-center justify-center shrink-0 shadow-inner">
+                        <i class="fa-solid fa-store text-4xl text-slate-600"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-black text-slate-900 mb-1">Lojas Físicas</h3>
+                        <p class="text-slate-500 font-medium mb-3">Prefere o olho no olho? Encontre uma unidade de atendimento na sua cidade.</p>
+                        <a href="cobertura.html" class="text-[#0050FF] font-bold hover:underline decoration-2 underline-offset-4">Encontrar Loja Próxima <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MEGA FOOTER PADRÃO PARA TODAS AS PÁGINAS -->
+    <footer class="bg-slate-950 text-slate-400 pt-24 pb-10 border-t border-white/10 relative overflow-hidden">
+        <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#0050FF] via-[#0035A8] to-[#FF6B00]"></div>
+        <div class="absolute right-0 top-0 w-[500px] h-[500px] bg-[#0050FF]/5 rounded-full blur-[150px] pointer-events-none"></div>
+        
+        <div class="max-w-[1440px] mx-auto px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16 relative z-10">
+            <div class="lg:col-span-2">
+                <div class="text-4xl font-black tracking-tighter text-white mb-6">alares</div>
+                <p class="text-lg leading-relaxed mb-8 max-w-sm">Levando internet de ultravelocidade, tecnologia e conectividade corporativa premium para o desenvolvimento da sua casa e empresa no Brasil inteiro.</p>
+                <div class="flex items-center gap-4">
+                    <a href="#" class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center hover:bg-[#0050FF] hover:text-white transition-all text-xl" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center hover:bg-[#0050FF] hover:text-white transition-all text-xl" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-lg mb-6 uppercase tracking-widest">Para Você</h4>
+                <ul class="space-y-4 font-medium">
+                    <li><a href="planos.html" class="hover:text-white hover:pl-2 transition-all">Planos de Internet</a></li>
+                    <li><a href="suporte.html" class="text-white font-bold hover:pl-2 transition-all">2ª Via de Fatura</a></li>
+                    <li><a href="suporte.html" class="hover:text-white hover:pl-2 transition-all">App Alares</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-lg mb-6 uppercase tracking-widest">A Empresa</h4>
+                <ul class="space-y-4 font-medium">
+                    <li><a href="sobre.html" class="hover:text-white hover:pl-2 transition-all">Nossa História & ESG</a></li>
+                    <li><a href="cobertura.html" class="hover:text-white hover:pl-2 transition-all">Rede e Cobertura</a></li>
+                    <li><a href="b2b.html" class="hover:text-white hover:pl-2 transition-all">Alares Empresas</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-lg mb-6 uppercase tracking-widest">Atendimento</h4>
+                <ul class="space-y-4 font-medium">
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-phone text-[#0050FF] mt-1"></i><div><span class="block text-white font-bold">SAC / Ouvidoria</span>106 00</div></li>
+                    <li class="flex items-start gap-3"><i class="fa-brands fa-whatsapp text-green-500 mt-1 text-lg"></i><div><span class="block text-white font-bold">WhatsApp Oficial</span>(11) 99999-9999</div></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-[1440px] mx-auto px-8 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm font-medium relative z-10">
+            <p>&copy; 2026 Alares Internet S.A. Todos os direitos reservados. Fundo Grain Management.</p>
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-white transition-colors">Termos de Uso</a>
+                <a href="#" class="hover:text-white transition-colors">Aviso de Privacidade LGPD</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WIDGET FLUTUANTE INTACTO -->
+    <div class="fixed bottom-8 right-8 z-[100] flex flex-col gap-4">
+        <button id="btn-back-to-top" class="w-12 h-12 bg-slate-800 text-white rounded-full shadow-xl flex items-center justify-center hover:bg-[#0050FF] hover:-translate-y-1 transition-all opacity-0 pointer-events-none translate-y-4 duration-300" aria-label="Voltar ao Topo">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+        <a href="suporte.html" class="w-16 h-16 bg-gradient-to-r from-green-400 to-green-600 text-white rounded-full shadow-2xl flex items-center justify-center text-3xl hover:scale-110 hover:shadow-[0_0_20px_rgba(74,222,128,0.6)] transition-all relative group" aria-label="Fale no WhatsApp">
+            <div class="absolute inset-0 bg-green-500 rounded-full animate-ping opacity-20"></div>
+            <i class="fa-brands fa-whatsapp relative z-10"></i>
+        </a>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

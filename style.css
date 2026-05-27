@@ -1,0 +1,211 @@
+/* ==========================================================================
+   ALARES - DESIGN SYSTEM & ENGENHARIA DE UI
+   Versão: 3.0 (Enterprise Edition - Arquitetura Completa)
+   Descrição: Folha de estilos global com suporte a Glassmorphism, 
+   animações de entrada triunfal e variáveis nativas do ecossistema Alares.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800;900&display=swap');
+
+/* =========================================
+   1. VARIÁVEIS GLOBAIS (DESIGN TOKENS)
+   ========================================= */
+:root {
+    /* Paleta Oficial Alares */
+    --alares-blue: #0050FF;
+    --alares-dark-blue: #0035A8;
+    --alares-orange: #FF6B00;
+    --alares-orange-hover: #e66000;
+    --alares-dark: #0f172a;
+    --alares-light: #f8fafc;
+    
+    /* Efeitos Globais e Glassmorphism */
+    --glass-bg: rgba(255, 255, 255, 0.85);
+    --glass-border: rgba(255, 255, 255, 0.4);
+    --glass-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+    
+    /* Variáveis Corporativas Dark Mode (B2B) */
+    --glass-bg-dark: rgba(15, 23, 42, 0.75);
+    --glass-border-dark: rgba(255, 255, 255, 0.08);
+    --glass-shadow-dark: inset 0 0 20px rgba(255, 255, 255, 0.02);
+}
+
+/* =========================================
+   2. CONFIGURAÇÕES BASE DO DOCUMENTO
+   ========================================= */
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    background-color: var(--alares-light);
+}
+
+/* =========================================
+   3. BARRA DE PROGRESSO DE LEITURA (SCROLL)
+   ========================================= */
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--alares-blue), var(--alares-orange));
+    z-index: 1000;
+    transition: width 0.1s ease-out;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+/* =========================================
+   4. KEYFRAMES DE ANIMAÇÃO (A MÁGICA VISUAL)
+   ========================================= */
+
+/* A Entrada Triunfal Principal - Exigência de Alto Impacto */
+@keyframes triumphantEntry {
+    0% {
+        opacity: 0;
+        transform: scale(0.92) translateY(60px);
+        filter: blur(12px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+        filter: blur(0);
+    }
+}
+
+/* Entrada Lateral Pesada (Para Cards, Painéis e Imagens) */
+@keyframes slideInRightHeavy {
+    0% {
+        opacity: 0;
+        transform: translateX(80px) scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+/* Efeito de Flutuação Suave (Para Mockups e Cards em Destaque) */
+@keyframes floatElement {
+    0%, 100% { 
+        transform: translateY(0); 
+    }
+    50% { 
+        transform: translateY(-15px); 
+    }
+}
+
+/* Efeito de Pulso Luminoso (Para Botões de Call to Action e Ofertas) */
+@keyframes glowPulse {
+    0%, 100% { 
+        box-shadow: 0 0 20px rgba(0, 80, 255, 0.3); 
+    }
+    50% { 
+        box-shadow: 0 0 40px rgba(0, 80, 255, 0.6); 
+    }
+}
+
+/* =========================================
+   5. CLASSES UTILITÁRIAS DE ANIMAÇÃO
+   ========================================= */
+
+/* Utilizando curvas de aceleração Bezier para movimentos premium */
+.animate-triumphant {
+    animation: triumphantEntry 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-heavy {
+    animation: slideInRightHeavy 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-float {
+    animation: floatElement 6s ease-in-out infinite;
+}
+
+.glow-effect:hover {
+    animation: glowPulse 2s infinite;
+}
+
+/* =========================================
+   6. ESTILOS CORPORATIVOS AVANÇADOS E TEXTURAS
+   ========================================= */
+
+/* Gradiente de Texto Exclusivo Alares */
+.text-gradient-alares {
+    background: linear-gradient(135deg, var(--alares-blue) 0%, var(--alares-dark-blue) 50%, var(--alares-orange) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Fundo Tecnológico Mesh (Malha de Pontos Gradientes) */
+.mesh-bg {
+    background-color: var(--alares-dark);
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(0, 80, 255, 0.2) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(255, 107, 0, 0.15) 0px, transparent 50%);
+}
+
+/* =========================================
+   7. GLASSMORPHISM (EFEITO DE VIDRO FOSCO)
+   ========================================= */
+
+/* Painel de Vidro Claro (Para Home, Planos e Suporte) */
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+}
+
+/* Painel de Vidro Escuro (Para B2B Corporativo e Heros) */
+.glass-panel-dark {
+    background: var(--glass-bg-dark);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: var(--glass-border-dark);
+    box-shadow: var(--glass-shadow-dark);
+}
+
+/* =========================================
+   8. MICROINTERAÇÕES (HOVER EFFECTS)
+   ========================================= */
+
+/* Elevação Suave ao passar o mouse em Cards de Serviço */
+.hover-lift {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 30px 60px -12px rgba(0, 80, 255, 0.15);
+}
+
+/* =========================================
+   9. CUSTOM SCROLLBAR (BARRA DE ROLAGEM)
+   ========================================= */
+
+::-webkit-scrollbar { 
+    width: 12px; 
+}
+
+::-webkit-scrollbar-track { 
+    background: var(--alares-dark); 
+}
+
+::-webkit-scrollbar-thumb { 
+    background: linear-gradient(var(--alares-blue), var(--alares-dark-blue));
+    border-radius: 6px; 
+    border: 3px solid var(--alares-dark); 
+}
+
+::-webkit-scrollbar-thumb:hover { 
+    background: var(--alares-orange); 
+}

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mapa de cobertura Alares. Fibra óptica de ultravelocidade presente em São Paulo, Minas Gerais, Paraná, Nordeste e mais.">
+    <title>Alares | Nossa Cobertura Nacional e Data Centers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-slate-50 text-slate-900 overflow-x-hidden selection:bg-[#0050FF] selection:text-white">
+
+    <!-- MEGA HEADER PREMIUM -->
+    <nav class="fixed w-full z-[100] bg-white/90 backdrop-blur-md border-b border-blue-100 shadow-sm transition-all duration-300" aria-label="Navegação Principal">
+        <div class="max-w-[1440px] mx-auto px-8 h-24 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group cursor-pointer" aria-label="Página Inicial Alares">
+                <div class="text-4xl font-black tracking-tighter text-[#0050FF] group-hover:text-[#0035A8] transition-colors">alares</div>
+                <div class="hidden sm:block h-8 w-px bg-slate-300"></div>
+                <span class="hidden sm:block text-xs font-bold text-slate-500 tracking-widest uppercase bg-slate-100 px-3 py-1 rounded-full border border-slate-200">Rede Nacional</span>
+            </a>
+
+            <div class="hidden lg:flex items-center gap-10 font-semibold text-slate-600">
+                <a href="index.html" class="hover:text-[#0050FF] transition-colors">Início</a>
+                <a href="planos.html" class="hover:text-[#0050FF] transition-colors">Planos Residenciais</a>
+                <a href="b2b.html" class="hover:text-[#0050FF] transition-colors">Empresas</a>
+                <a href="cobertura.html" class="text-[#0050FF]">Cobertura</a>
+                <a href="sobre.html" class="hover:text-[#0050FF] transition-colors">Institucional</a>
+            </div>
+
+            <div class="flex items-center gap-6">
+                <a href="suporte.html" class="hidden md:flex items-center gap-2 text-slate-700 hover:text-[#0050FF] transition font-bold">
+                    <i class="fa-regular fa-user-circle text-xl"></i> Área do Cliente
+                </a>
+                <a href="planos.html" class="bg-gradient-to-r from-[#FF6B00] to-[#e66000] hover:shadow-[0_0_25px_rgba(255,107,0,0.4)] text-white px-8 py-3.5 rounded-full font-black transition-all transform hover:scale-105 flex items-center gap-2">
+                    Assine Já <i class="fa-solid fa-bolt"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO DE COBERTURA: MESH BACKGROUND E BUSCADOR DE CEP -->
+    <section class="pt-40 pb-24 px-8 relative overflow-hidden mesh-bg text-white">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center opacity-20 mix-blend-screen"></div>
+        <div class="absolute top-0 left-1/4 w-[800px] h-[800px] bg-blue-600/30 rounded-full blur-[180px] pointer-events-none"></div>
+        
+        <div class="max-w-[1440px] mx-auto grid lg:grid-cols-2 gap-16 relative z-10 items-center animate-triumphant">
+            <div>
+                <div class="inline-flex items-center gap-3 glass-panel-dark border border-white/20 px-5 py-2 rounded-full mb-8">
+                    <i class="fa-solid fa-location-dot text-[#FF6B00]"></i>
+                    <span class="text-sm font-bold tracking-widest uppercase text-white">Mapa de Operações</span>
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl font-black text-white leading-[1.05] mb-8 tracking-tight">
+                    A fibra que <br> ilumina o <span class="text-gradient-alares drop-shadow-2xl">Brasil.</span>
+                </h1>
+                
+                <p class="text-xl text-slate-300 max-w-xl font-medium mb-10 leading-relaxed">
+                    Estamos presentes em polos estratégicos, desde a agitação de São Paulo e Paraná, passando pelo poder industrial do Sul de Minas, até a força do Nordeste. Onde tem Alares, tem infraestrutura de ponta.
+                </p>
+                
+                <!-- Buscador de Cobertura Interativo (Glassmorphism) -->
+                <div class="glass-panel-dark p-4 rounded-3xl flex flex-col sm:flex-row gap-4 border border-white/20 shadow-[0_30px_60px_-15px_rgba(0,80,255,0.4)] relative hover:border-white/40 transition-colors">
+                    <div class="flex-1 flex items-center px-4 gap-4">
+                        <i class="fa-solid fa-map-location-dot text-[#FF6B00] text-2xl"></i>
+                        <input type="text" id="cep-input" placeholder="Digite seu CEP ou Cidade..." class="w-full bg-transparent border-none text-white placeholder-slate-400 outline-none text-xl font-medium">
+                    </div>
+                    <button id="btn-buscar-cep" class="bg-[#FF6B00] hover:bg-[#e66000] text-white font-black px-10 py-5 rounded-2xl transition-all whitespace-nowrap text-lg flex items-center justify-center gap-2 shadow-lg">
+                        Buscar Cobertura
+                    </button>
+                </div>
+                <!-- Alerta de Resultado do CEP -->
+                <div id="cep-result" class="mt-6 hidden p-5 rounded-2xl border font-bold text-lg"></div>
+            </div>
+            
+            <!-- Cards de Estatísticas com Imagem Flutuante -->
+            <div class="relative animate-float">
+                <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=800&q=80" alt="Mapa de Fibra" class="rounded-[3rem] shadow-2xl border-4 border-white/10 opacity-60 mix-blend-luminosity mb-8 w-full h-[300px] object-cover">
+                
+                <div class="grid grid-cols-2 gap-6 absolute -bottom-12 w-full px-8">
+                    <div class="glass-panel-dark border border-white/20 p-8 rounded-3xl hover-lift">
+                        <div class="text-5xl font-black text-[#0050FF] mb-2">400+</div>
+                        <div class="text-slate-300 font-bold text-xs uppercase tracking-widest">Cidades Iluminadas</div>
+                    </div>
+                    <div class="glass-panel-dark border border-white/20 p-8 rounded-3xl hover-lift">
+                        <div class="text-5xl font-black text-[#FF6B00] mb-2">7</div>
+                        <div class="text-slate-300 font-bold text-xs uppercase tracking-widest">Estados Atendidos</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INFRAESTRUTURA E BACKBONE (COM IMAGENS) -->
+    <section class="py-32 px-8 bg-white border-b border-slate-200">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-[#0050FF] font-bold tracking-widest uppercase text-sm mb-4 block">Engenharia de Rede</span>
+                <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-6">A Força por Trás da <span class="text-[#FF6B00]">Conexão</span></h2>
+                <p class="text-xl text-slate-600 max-w-3xl mx-auto font-medium">Nossa rede foi desenhada para altíssima disponibilidade. Não dependemos de terceiros: operamos um dos maiores backbones independentes do país.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Ponto 1 -->
+                <div class="glass-panel rounded-[2.5rem] border border-slate-200 hover-lift flex flex-col overflow-hidden bg-white shadow-lg group">
+                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80" alt="Data Centers" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="p-10 flex-1 flex flex-col -mt-12 relative z-10">
+                        <div class="w-16 h-16 bg-blue-50 text-[#0050FF] rounded-2xl flex items-center justify-center text-2xl mb-6 border-4 border-white shadow-lg">
+                            <i class="fa-solid fa-server"></i>
+                        </div>
+                        <h3 class="text-2xl font-black text-slate-800 mb-4">Data Centers Regionais</h3>
+                        <p class="text-slate-600 leading-relaxed font-medium">Possuímos caches locais dos principais servidores mundiais (Google, Netflix, Riot), garantindo que o seu conteúdo chegue de forma instantânea.</p>
+                    </div>
+                </div>
+
+                <!-- Ponto 2 -->
+                <div class="glass-panel rounded-[2.5rem] border border-slate-200 hover-lift flex flex-col overflow-hidden bg-white shadow-lg group">
+                    <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80" alt="Fibra" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="p-10 flex-1 flex flex-col -mt-12 relative z-10">
+                        <div class="w-16 h-16 bg-orange-50 text-[#FF6B00] rounded-2xl flex items-center justify-center text-2xl mb-6 border-4 border-white shadow-lg">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3 class="text-2xl font-black text-slate-800 mb-4">Anéis de Redundância</h3>
+                        <p class="text-slate-600 leading-relaxed font-medium">Nossa fibra opera em formato de anel. Se um cabo for rompido em uma rodovia, o tráfego é automaticamente redirecionado por outra rota em milissegundos.</p>
+                    </div>
+                </div>
+
+                <!-- Ponto 3 -->
+                <div class="glass-panel rounded-[2.5rem] border border-slate-200 hover-lift flex flex-col overflow-hidden bg-white shadow-lg group">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80" alt="NOC" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="p-10 flex-1 flex flex-col -mt-12 relative z-10">
+                        <div class="w-16 h-16 bg-green-50 text-green-500 rounded-2xl flex items-center justify-center text-2xl mb-6 border-4 border-white shadow-lg">
+                            <i class="fa-solid fa-satellite-dish"></i>
+                        </div>
+                        <h3 class="text-2xl font-black text-slate-800 mb-4">NOC 24 horas</h3>
+                        <p class="text-slate-600 leading-relaxed font-medium">Nosso Centro de Operações de Rede monitora cada poste e cada roteador da rede Alares 24/7, despachando técnicos proativamente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LISTAGEM MASSIVA DE ESTADOS E CIDADES (ATUALIZADA COM PARANÁ) -->
+    <section class="py-32 px-8 relative z-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-6xl font-black text-slate-900 mb-6">Nossas Operações por <span class="text-[#0050FF]">Estado</span></h2>
+                <p class="text-xl text-slate-600 font-medium">Presentes em 7 estados conectando os principais pólos residenciais e industriais do Brasil.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                
+                <!-- MINAS GERAIS -->
+                <div class="glass-panel rounded-[2.5rem] border border-slate-200 hover-lift overflow-hidden bg-white flex flex-col shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f0a?auto=format&fit=crop&w=800&q=80" alt="Minas Gerais" class="w-full h-40 object-cover">
+                    <div class="p-10 relative z-10 flex-1">
+                        <div class="flex items-center justify-between mb-8 pb-6 border-b border-slate-100">
+                            <div class="flex items-center gap-6">
+                                <div class="w-16 h-16 bg-[#0050FF] text-white rounded-2xl flex items-center justify-center text-3xl font-black shadow-lg border-4 border-white -mt-16">MG</div>
+                                <h3 class="text-3xl font-black text-slate-800">Minas Gerais</h3>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-y-4 gap-x-8 text-slate-600 font-medium text-lg">
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-check text-[#0050FF]"></i> Pouso Alegre</div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-check text-[#0050FF]"></i> Varginha</div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-check text-[#0050FF]"></i> Poços de Caldas</div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-check text-[#0050FF]"></i> Extrema</div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-check text-[#0050FF]"></i> Itajubá</div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-check text-[#0050FF]"></i> Ouro Fino</div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-check text-[#0050FF]"></i> S. Gonçalo do Sapucaí</div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-check text-[#0050FF]"></i> Alfenas</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SÃO PAULO -->
+                <div class="glass-panel rounded-[2.5rem] border border-slate-200 hover-lift overflow-hidden bg-white flex flex-col shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1543059080-f9b1272213d5?auto=format&fit=crop&w=800&q=80" alt="São Paulo" class="w-full h-40 object-cover">
+                    <div class="p-10 relative z-10 flex-1">
+                        <div class="flex items-center justify-between mb-8 pb-6 border-b border-slate-100">
+                            <div class="flex items-center gap-6">
+                                <div class="w-16 h-16 bg-[#0050FF] text-white rounded-2xl flex items-center justify-center text-3xl font-black shadow-lg border-4 border-white -mt-16">SP</div>
+                                <h3 class="text-3xl font-black text-slate-800">São Paulo</h3>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-y-4 gap-x-8 text-slate-600 font-medium text-lg">
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-check text-[#0050FF]"></i> Jundiaí</div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-check text-[#0050FF]"></i> Sorocaba</div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-check text-[#0050FF]"></i> Franca</div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-check text-[#0050FF]"></i> Bauru</div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-check text-[#0050FF]"></i> Marília</div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-check text-[#0050FF]"></i> São Carlos</div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-check text-[#0050FF]"></i> Araraquara</div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-check text-[#0050FF]"></i> Rio Claro</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PARANÁ (NOVO) -->
+                <div class="glass-panel rounded-[2.5rem] border border-slate-200 hover-lift overflow-hidden bg-white flex flex-col shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1612450130635-f093122c6731?auto=format&fit=crop&w=800&q=80" alt="Paraná" class="w-full h-40 object-cover">
+                    <div class="p-10 relative z-10 flex-1">
+                        <div class="flex items-center justify-between mb-8 pb-6 border-b border-slate-100">
+                            <div class="flex items-center gap-6">
+                                <div class="w-16 h-16 bg-[#0050FF] text-white rounded-2xl flex items-center justify-center text-3xl font-black shadow-lg border-4 border-white -mt-16">PR</div>
+                                <h3 class="text-3xl font-black text-slate-800">Paraná</h3>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-y-4 gap-x-8 text-slate-600 font-medium text-lg">
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-check text-[#0050FF]"></i> Londrina</div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-check text-[#0050FF]"></i> Maringá</div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-check text-[#0050FF]"></i> Cornélio Procópio</div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-check text-[#0050FF]"></i> Jacarezinho</div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-check text-[#0050FF]"></i> S. A. da Platina</div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-check text-[#0050FF]"></i> Bandeirantes</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIO GRANDE DO NORTE -->
+                <div class="glass-panel rounded-[2.5rem] border border-slate-200 hover-lift overflow-hidden bg-white flex flex-col shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1618335359300-84eb96155577?auto=format&fit=crop&w=800&q=80" alt="Rio Grande do Norte" class="w-full h-40 object-cover">
+                    <div class="p-10 relative z-10 flex-1">
+                        <div class="flex items-center justify-between mb-8 pb-6 border-b border-slate-100">
+                            <div class="flex items-center gap-6">
+                                <div class="w-16 h-16 bg-[#FF6B00] text-white rounded-2xl flex items-center justify-center text-3xl font-black shadow-lg border-4 border-white -mt-16">RN</div>
+                                <h3 class="text-3xl font-black text-slate-800">Rio Grande do Norte</h3>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-y-4 gap-x-8 text-slate-600 font-medium text-lg">
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-check text-[#FF6B00]"></i> Natal</div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-check text-[#FF6B00]"></i> Parnamirim</div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-check text-[#FF6B00]"></i> Mossoró</div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-check text-[#FF6B00]"></i> Macaíba</div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-check text-[#FF6B00]"></i> S. G. do Amarante</div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-check text-[#FF6B00]"></i> Extremoz</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CEARÁ -->
+                <div class="glass-panel rounded-[2.5rem] border border-slate-200 hover-lift overflow-hidden bg-white flex flex-col shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1590059345638-3444400e9eb8?auto=format&fit=crop&w=800&q=80" alt="Ceará" class="w-full h-40 object-cover">
+                    <div class="p-10 relative z-10 flex-1">
+                        <div class="flex items-center justify-between mb-8 pb-6 border-b border-slate-100">
+                            <div class="flex items-center gap-6">
+                                <div class="w-16 h-16 bg-[#FF6B00] text-white rounded-2xl flex items-center justify-center text-3xl font-black shadow-lg border-4 border-white -mt-16">CE</div>
+                                <h3 class="text-3xl font-black text-slate-800">Ceará</h3>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-y-4 gap-x-8 text-slate-600 font-medium text-lg">
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-check text-[#FF6B00]"></i> Fortaleza</div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-check text-[#FF6B00]"></i> Juazeiro do Norte</div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-check text-[#FF6B00]"></i> Crato</div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-check text-[#FF6B00]"></i> Barbalha</div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-check text-[#FF6B00]"></i> Sobral</div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-check text-[#FF6B00]"></i> Eusébio</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PARAÍBA E BAHIA -->
+                <div class="glass-panel rounded-[2.5rem] border border-blue-400 hover-lift overflow-hidden bg-[#0050FF] text-white flex flex-col shadow-2xl relative">
+                    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80')] bg-cover opacity-20 mix-blend-screen"></div>
+                    <div class="p-10 relative z-10 flex-1 flex flex-col justify-center">
+                        <div class="flex items-center justify-between mb-8 pb-6 border-b border-blue-400/50">
+                            <h3 class="text-3xl font-black">Paraíba & Bahia</h3>
+                            <i class="fa-solid fa-earth-americas text-4xl text-blue-300"></i>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 text-blue-100 font-medium text-lg">
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-400"></i> Campina Grande (PB)</div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-400"></i> João Pessoa (PB)</div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-400"></i> Teixeira de Freitas (BA)</div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-400"></i> Eunápolis (BA)</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPANSÃO / LEAD -->
+    <section class="py-24 px-8 bg-slate-900 text-white text-center relative border-t border-white/10">
+        <div class="max-w-[800px] mx-auto relative z-10">
+            <h2 class="text-4xl md:text-5xl font-black mb-6">Sua cidade não está na lista?</h2>
+            <p class="text-xl text-slate-400 mb-10 leading-relaxed font-medium">A expansão da Alares não para. Deixe seus dados na nossa lista de interesse e seja o primeiro a saber quando a fibra que voa chegar no seu endereço.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <input type="email" placeholder="Digite seu melhor e-mail" class="bg-white/5 border border-white/20 rounded-xl px-6 py-4 outline-none focus:border-[#FF6B00] text-white text-lg w-full sm:w-auto backdrop-blur">
+                <button class="bg-[#FF6B00] hover:bg-[#e66000] text-white font-black px-10 py-4 rounded-xl transition-all shadow-[0_10px_20px_rgba(255,107,0,0.3)] text-lg whitespace-nowrap">Me avise!</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- LÓGICA DE BUSCA DO CEP (Mantida Intacta) -->
+    <script>
+        const btnBuscar = document.getElementById('btn-buscar-cep');
+        const inputCep = document.getElementById('cep-input');
+        const resultDiv = document.getElementById('cep-result');
+
+        if (btnBuscar) {
+            btnBuscar.addEventListener('click', () => {
+                const valor = inputCep.value.trim();
+                if (valor === '') {
+                    resultDiv.className = "mt-6 p-5 rounded-2xl border border-red-500 bg-red-500/20 text-red-100 font-bold text-lg block animate-slide-heavy backdrop-blur-md";
+                    resultDiv.innerHTML = '<i class="fa-solid fa-triangle-exclamation mr-2"></i> Digite um CEP ou Cidade válida para buscar.';
+                    return;
+                }
+
+                const originalText = btnBuscar.innerHTML;
+                btnBuscar.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Buscando...';
+                btnBuscar.classList.add('opacity-80', 'cursor-not-allowed');
+                resultDiv.classList.add('hidden');
+
+                setTimeout(() => {
+                    btnBuscar.innerHTML = originalText;
+                    btnBuscar.classList.remove('opacity-80', 'cursor-not-allowed');
+                    
+                    resultDiv.className = "mt-6 p-5 rounded-2xl border border-green-400 bg-green-500/20 text-green-100 font-bold text-lg block animate-slide-heavy backdrop-blur-md";
+                    resultDiv.innerHTML = `<div class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-2xl text-green-400"></i> <span>Excelente! Identificamos cobertura de ultravelocidade para a região buscada. <a href="planos.html" class="underline text-white ml-2 hover:text-[#FF6B00]">Ver planos.</a></span></div>`;
+                }, 1500);
+            });
+        }
+    </script>
+
+    <!-- MEGA FOOTER PADRÃO PARA TODAS AS PÁGINAS -->
+    <footer class="bg-slate-950 text-slate-400 pt-24 pb-10 border-t border-white/10 relative overflow-hidden">
+        <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#0050FF] via-[#0035A8] to-[#FF6B00]"></div>
+        <div class="absolute right-0 top-0 w-[500px] h-[500px] bg-[#0050FF]/5 rounded-full blur-[150px] pointer-events-none"></div>
+        
+        <div class="max-w-[1440px] mx-auto px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16 relative z-10">
+            <div class="lg:col-span-2">
+                <div class="text-4xl font-black tracking-tighter text-white mb-6">alares</div>
+                <p class="text-lg leading-relaxed mb-8 max-w-sm">Levando internet de ultravelocidade, tecnologia corporativa premium para o desenvolvimento da sua casa e empresa no Brasil inteiro.</p>
+                <div class="flex items-center gap-4">
+                    <a href="#" class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center hover:bg-[#0050FF] hover:text-white transition-all text-xl" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center hover:bg-[#0050FF] hover:text-white transition-all text-xl" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-lg mb-6 uppercase tracking-widest">Para Você</h4>
+                <ul class="space-y-4 font-medium">
+                    <li><a href="planos.html" class="hover:text-white hover:pl-2 transition-all">Planos de Internet</a></li>
+                    <li><a href="suporte.html" class="hover:text-white hover:pl-2 transition-all">2ª Via de Fatura</a></li>
+                    <li><a href="suporte.html" class="hover:text-white hover:pl-2 transition-all">App Alares</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-lg mb-6 uppercase tracking-widest">A Empresa</h4>
+                <ul class="space-y-4 font-medium">
+                    <li><a href="sobre.html" class="hover:text-white hover:pl-2 transition-all">Nossa História & ESG</a></li>
+                    <li><a href="cobertura.html" class="text-white font-bold hover:pl-2 transition-all">Rede e Cobertura</a></li>
+                    <li><a href="b2b.html" class="hover:text-white hover:pl-2 transition-all">Alares Empresas</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-lg mb-6 uppercase tracking-widest">Atendimento</h4>
+                <ul class="space-y-4 font-medium">
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-phone text-[#0050FF] mt-1"></i><div><span class="block text-white font-bold">SAC / Ouvidoria</span>106 00</div></li>
+                    <li class="flex items-start gap-3"><i class="fa-brands fa-whatsapp text-green-500 mt-1 text-lg"></i><div><span class="block text-white font-bold">WhatsApp Oficial</span>(11) 99999-9999</div></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-[1440px] mx-auto px-8 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm font-medium relative z-10">
+            <p>&copy; 2026 Alares Internet S.A. Todos os direitos reservados. Fundo Grain Management.</p>
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-white transition-colors">Termos de Uso</a>
+                <a href="#" class="hover:text-white transition-colors">Aviso de Privacidade LGPD</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WIDGET FLUTUANTE INTACTO -->
+    <div class="fixed bottom-8 right-8 z-[100] flex flex-col gap-4">
+        <button id="btn-back-to-top" class="w-12 h-12 bg-slate-800 text-white rounded-full shadow-xl flex items-center justify-center hover:bg-[#0050FF] hover:-translate-y-1 transition-all opacity-0 pointer-events-none translate-y-4 duration-300" aria-label="Voltar ao Topo">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+        <a href="suporte.html" class="w-16 h-16 bg-gradient-to-r from-green-400 to-green-600 text-white rounded-full shadow-2xl flex items-center justify-center text-3xl hover:scale-110 hover:shadow-[0_0_20px_rgba(74,222,128,0.6)] transition-all relative group" aria-label="Fale no WhatsApp">
+            <div class="absolute inset-0 bg-green-500 rounded-full animate-ping opacity-20"></div>
+            <i class="fa-brands fa-whatsapp relative z-10"></i>
+        </a>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alares Internet. A fibra que conecta o Brasil com ultravelocidade e estabilidade.">
+    <title>Alares | A fibra que conecta o Brasil</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-slate-50 text-slate-900 overflow-x-hidden selection:bg-[#0050FF] selection:text-white">
+
+    <!-- MEGA HEADER PREMIUM -->
+    <nav class="fixed w-full z-[100] bg-white/90 backdrop-blur-md border-b border-blue-100 shadow-sm transition-all duration-300" aria-label="Navegação Principal">
+        <div class="max-w-[1440px] mx-auto px-8 h-24 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group cursor-pointer" aria-label="Página Inicial Alares">
+                <div class="text-4xl font-black tracking-tighter text-[#0050FF] group-hover:text-[#0035A8] transition-colors">alares</div>
+                <div class="hidden sm:block h-8 w-px bg-slate-300"></div>
+                <span class="hidden sm:block text-xs font-bold text-slate-500 tracking-widest uppercase bg-slate-100 px-3 py-1 rounded-full border border-slate-200">Portal Oficial</span>
+            </a>
+
+            <div class="hidden lg:flex items-center gap-10 font-semibold text-slate-600">
+                <a href="index.html" class="text-[#0050FF]">Início</a>
+                <a href="planos.html" class="hover:text-[#0050FF] transition-colors">Planos Residenciais</a>
+                <a href="b2b.html" class="hover:text-[#0050FF] transition-colors">Para Empresas</a>
+                <a href="cobertura.html" class="hover:text-[#0050FF] transition-colors">Nossa Cobertura</a>
+                <a href="sobre.html" class="hover:text-[#0050FF] transition-colors">Institucional</a>
+            </div>
+
+            <div class="flex items-center gap-6">
+                <a href="suporte.html" class="hidden md:flex items-center gap-2 text-slate-700 hover:text-[#0050FF] transition font-bold">
+                    <i class="fa-regular fa-user-circle text-xl"></i> Área do Cliente
+                </a>
+                <a href="planos.html" class="bg-gradient-to-r from-[#FF6B00] to-[#e66000] hover:shadow-[0_0_25px_rgba(255,107,0,0.4)] text-white px-8 py-3.5 rounded-full font-black transition-all transform hover:scale-105 flex items-center gap-2">
+                    Assine Já <i class="fa-solid fa-bolt"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN HERO: ENTRADA TRIUNFAL E MESH BACKGROUND -->
+    <section class="min-h-screen flex items-center pt-24 pb-20 px-8 relative overflow-hidden mesh-bg">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center opacity-10 mix-blend-screen"></div>
+
+        <div class="max-w-[1440px] mx-auto w-full grid lg:grid-cols-2 gap-16 relative z-10 items-center">
+            
+            <div class="animate-triumphant">
+                <div class="inline-flex items-center gap-3 glass-panel-dark border border-white/20 px-5 py-2 rounded-full mb-8">
+                    <span class="w-2.5 h-2.5 rounded-full bg-green-400 animate-pulse shadow-[0_0_10px_#4ade80]"></span>
+                    <span class="text-sm font-bold tracking-widest uppercase text-white">Mais de 117 Cidades Atendidas</span>
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl font-black text-white leading-[1.05] mb-8 tracking-tight">
+                    O poder para ir <br> muito <span class="text-gradient-alares drop-shadow-2xl">além.</span>
+                </h1>
+                
+                <p class="text-xl text-slate-300 mb-12 leading-relaxed max-w-xl font-medium">
+                    Alares reúne a força de empresas como Webby, Conexão e Cabo Telecom. Estabilidade inabalável e tecnologia Wi-Fi 6 para residências, indústrias e polos estratégicos do Brasil.
+                </p>
+                
+                <div class="flex flex-wrap gap-5">
+                    <a href="planos.html" class="bg-[#0050FF] hover:bg-[#0035A8] text-white font-black px-10 py-5 rounded-2xl transition-all transform hover:-translate-y-1 shadow-[0_15px_30px_-10px_rgba(0,80,255,0.5)] text-lg flex items-center gap-3">
+                        Planos para Casa <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="b2b.html" class="bg-transparent border-2 border-white/20 text-white hover:bg-white/10 hover:border-white/40 font-bold px-10 py-5 rounded-2xl backdrop-blur transition-all text-lg">
+                        Soluções Corporativas
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card Destaque Hero (Flutuante) -->
+            <div class="relative animate-slide-heavy lg:ml-auto w-full max-w-md animate-float">
+                <div class="absolute -inset-1 bg-gradient-to-r from-[#0050FF] to-[#FF6B00] rounded-[2.5rem] blur opacity-40"></div>
+                <div class="glass-panel-dark p-10 rounded-[2.5rem] relative border border-white/10 shadow-2xl">
+                    <div class="absolute -top-5 right-8 bg-[#FF6B00] text-white px-6 py-2 rounded-full text-sm font-black uppercase tracking-widest shadow-lg transform rotate-3 border border-orange-400">
+                        Top Performance
+                    </div>
+                    
+                    <h3 class="text-2xl font-black text-white mb-2">Alares Giga Extreme</h3>
+                    <p class="text-slate-400 text-sm mb-8 font-medium">Latência ultra baixa e capacidade simétrica de dados.</p>
+                    
+                    <div class="flex items-end gap-2 mb-8 border-b border-white/10 pb-8">
+                        <span class="text-7xl font-black text-white">1</span>
+                        <span class="text-3xl font-bold text-[#0050FF] mb-2">Giga</span>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8 text-slate-300 font-medium">
+                        <li class="flex items-center gap-4"><i class="fa-solid fa-microchip text-green-400 text-xl"></i> Tecnologia Wi-Fi 6 Mesh</li>
+                        <li class="flex items-center gap-4"><i class="fa-solid fa-shield-halved text-green-400 text-xl"></i> Roteamento Seguro SLA 99%</li>
+                        <li class="flex items-center gap-4"><i class="fa-solid fa-headset text-green-400 text-xl"></i> Atendimento Prioritário</li>
+                    </ul>
+                    
+                    <a href="planos.html" class="w-full block text-center bg-white text-slate-950 font-black py-4 rounded-xl text-lg hover:bg-[#FF6B00] hover:text-white transition-colors">
+                        Consultar Disponibilidade
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PROVA SOCIAL COM CONTADORES DINÂMICOS -->
+    <section class="py-16 bg-[#0050FF] relative z-20 -mt-10 mx-8 rounded-[2.5rem] shadow-[0_30px_60px_-15px_rgba(0,80,255,0.4)] overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+        <div class="max-w-[1440px] mx-auto px-8 grid grid-cols-2 md:grid-cols-4 gap-8 text-center relative z-10 divide-x divide-white/20">
+            <div>
+                <div class="text-5xl md:text-6xl font-black text-white mb-2 dynamic-counter" data-target="500" data-suffix="k+">0</div>
+                <div class="text-blue-200 font-bold uppercase tracking-widest text-sm">Assinantes Ativos</div>
+            </div>
+            <div>
+                <div class="text-5xl md:text-6xl font-black text-white mb-2 dynamic-counter" data-target="117" data-suffix="+">0</div>
+                <div class="text-blue-200 font-bold uppercase tracking-widest text-sm">Cidades Integradas</div>
+            </div>
+            <div>
+                <div class="text-5xl md:text-6xl font-black text-white mb-2 dynamic-counter" data-target="25" data-suffix="k km">0</div>
+                <div class="text-blue-200 font-bold uppercase tracking-widest text-sm">Rede Backbone</div>
+            </div>
+            <div>
+                <div class="text-5xl md:text-6xl font-black text-white mb-2">24/7</div>
+                <div class="text-blue-200 font-bold uppercase tracking-widest text-sm">Monitoramento NOC</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOVA SEÇÃO: MEGA CARROSSEL EM PAISAGEM -->
+    <section class="py-24 relative overflow-hidden bg-white">
+        <div class="max-w-[1440px] mx-auto px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-4">A conexão que move seu <span class="text-[#0050FF]">Mundo</span></h2>
+                <p class="text-xl text-slate-600 font-medium">Deslize para descobrir tudo o que a infraestrutura Alares pode oferecer.</p>
+            </div>
+
+            <!-- Wrapper do Carrossel -->
+            <div class="relative w-full h-[500px] md:h-[650px] rounded-[3rem] overflow-hidden shadow-2xl group" id="hero-carousel">
+                <!-- Track dos Slides -->
+                <div class="flex h-full w-[300%] transition-transform duration-700 ease-in-out" id="carousel-track">
+                    
+                    <!-- Slide 1: Casa -->
+                    <div class="w-1/3 h-full relative flex-shrink-0">
+                        <img src="https://images.unsplash.com/photo-1517502884422-41eaead166d4?auto=format&fit=crop&w=2000&q=80" alt="Família assistindo TV" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent"></div>
+                        <div class="absolute bottom-12 left-8 md:bottom-20 md:left-20">
+                            <span class="bg-[#0050FF] text-white px-5 py-2 rounded-full text-xs font-black uppercase tracking-widest mb-6 inline-block shadow-lg">Conexão Familiar</span>
+                            <h3 class="text-4xl md:text-6xl font-black text-white mb-4">Alares para sua Casa</h3>
+                            <p class="text-xl text-slate-200 max-w-2xl mb-8">Assista em 4K, estude e trabalhe sem interrupções. A fibra ótica que une a família com Wi-Fi inteligente.</p>
+                            <a href="planos.html" class="bg-white text-[#0050FF] font-black px-8 py-4 rounded-xl hover:bg-slate-100 transition-colors inline-block">Conhecer Planos</a>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2: Gamer -->
+                    <div class="w-1/3 h-full relative flex-shrink-0">
+                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=2000&q=80" alt="Setup Gamer E-Sports" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-purple-950 via-purple-900/50 to-transparent"></div>
+                        <div class="absolute bottom-12 left-8 md:bottom-20 md:left-20">
+                            <span class="bg-purple-600 text-white px-5 py-2 rounded-full text-xs font-black uppercase tracking-widest mb-6 inline-block shadow-lg">Alta Performance</span>
+                            <h3 class="text-4xl md:text-6xl font-black text-white mb-4">Alares Gaming</h3>
+                            <p class="text-xl text-slate-200 max-w-2xl mb-8">Rotas otimizadas e ping cravado para você dominar no cenário competitivo e não perder nenhum milissegundo.</p>
+                            <a href="planos.html" class="bg-purple-600 text-white font-black px-8 py-4 rounded-xl hover:bg-purple-700 transition-colors inline-block">Planos Gamers</a>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3: Empresas -->
+                    <div class="w-1/3 h-full relative flex-shrink-0">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=2000&q=80" alt="Servidores e Data Center Corporativo" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/60 to-transparent"></div>
+                        <div class="absolute bottom-12 left-8 md:bottom-20 md:left-20">
+                            <span class="bg-amber-500 text-slate-900 px-5 py-2 rounded-full text-xs font-black uppercase tracking-widest mb-6 inline-block shadow-lg">Infraestrutura B2B</span>
+                            <h3 class="text-4xl md:text-6xl font-black text-white mb-4">Alares Empresas</h3>
+                            <p class="text-xl text-slate-200 max-w-2xl mb-8">Links dedicados, SD-WAN e PABX IP para manter a sua indústria e escritórios sempre online e seguros.</p>
+                            <a href="b2b.html" class="bg-amber-500 text-slate-900 font-black px-8 py-4 rounded-xl hover:bg-amber-400 transition-colors inline-block">Soluções B2B</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Controles do Carrossel -->
+                <button id="prev-slide" class="absolute left-6 top-1/2 -translate-y-1/2 w-14 h-14 bg-white/20 backdrop-blur-md rounded-full text-white text-2xl flex items-center justify-center hover:bg-[#0050FF] transition-all opacity-0 group-hover:opacity-100 z-20"><i class="fa-solid fa-chevron-left"></i></button>
+                <button id="next-slide" class="absolute right-6 top-1/2 -translate-y-1/2 w-14 h-14 bg-white/20 backdrop-blur-md rounded-full text-white text-2xl flex items-center justify-center hover:bg-[#0050FF] transition-all opacity-0 group-hover:opacity-100 z-20"><i class="fa-solid fa-chevron-right"></i></button>
+                
+                <!-- Indicadores (Dots) -->
+                <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 z-20" id="carousel-indicators">
+                    <button class="w-4 h-4 rounded-full bg-white transition-all shadow-lg carousel-dot" data-index="0"></button>
+                    <button class="w-4 h-4 rounded-full bg-white/50 hover:bg-white/80 transition-all shadow-lg carousel-dot" data-index="1"></button>
+                    <button class="w-4 h-4 rounded-full bg-white/50 hover:bg-white/80 transition-all shadow-lg carousel-dot" data-index="2"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DESTAQUES E OFERTAS IMPERDÍVEIS -->
+    <section class="py-24 px-8 bg-slate-50 relative">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between mb-16 gap-6">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-4">Combos & <span class="text-[#FF6B00]">Vantagens Exclusivas</span></h2>
+                    <p class="text-xl text-slate-600 font-medium max-w-2xl">Aproveite as ofertas do mês e leve o melhor do entretenimento digital junto com a sua fibra ótica.</p>
+                </div>
+                <a href="planos.html" class="bg-white border-2 border-slate-200 text-slate-800 font-bold px-8 py-4 rounded-xl hover:border-[#0050FF] hover:text-[#0050FF] transition-all whitespace-nowrap">
+                    Ver todas as ofertas
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <!-- Banner Combo 1 -->
+                <div class="bg-gradient-to-br from-slate-900 to-slate-800 rounded-[2.5rem] p-12 text-white relative overflow-hidden shadow-2xl hover:-translate-y-2 transition-transform duration-300">
+                    <div class="absolute right-0 top-0 w-64 h-64 bg-[#0050FF] rounded-bl-full opacity-20 blur-2xl"></div>
+                    <div class="relative z-10 flex flex-col h-full justify-between">
+                        <div>
+                            <div class="bg-[#FF6B00] text-white px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-6 inline-block">Combo Família</div>
+                            <h3 class="text-4xl font-black mb-4">Fibra 600 Mega + Max</h3>
+                            <p class="text-slate-400 text-lg mb-8">A velocidade ideal para sua casa com o catálogo completo da Max (antigo HBO Max) incluso na sua fatura.</p>
+                        </div>
+                        <div class="flex items-center justify-between border-t border-white/10 pt-8">
+                            <div class="flex text-4xl text-slate-300 gap-4">
+                                <i class="fa-solid fa-wifi text-[#0050FF]"></i>
+                                <i class="fa-solid fa-tv text-purple-500"></i>
+                            </div>
+                            <a href="planos.html" class="bg-[#0050FF] text-white font-bold px-8 py-3 rounded-xl hover:bg-blue-600 transition-colors">Saber Mais</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Banner Combo 2 -->
+                <div class="bg-gradient-to-br from-[#0050FF] to-blue-800 rounded-[2.5rem] p-12 text-white relative overflow-hidden shadow-2xl hover:-translate-y-2 transition-transform duration-300">
+                    <div class="absolute right-0 bottom-0 w-64 h-64 bg-white rounded-tl-full opacity-10 blur-2xl"></div>
+                    <div class="relative z-10 flex flex-col h-full justify-between">
+                        <div>
+                            <div class="bg-white text-[#0050FF] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-6 inline-block">App Exclusivo</div>
+                            <h3 class="text-4xl font-black mb-4">Skeelo & Deezer Integrados</h3>
+                            <p class="text-blue-100 text-lg mb-8">Ao assinar planos a partir de 300 Mega, você ganha acesso ilimitado a best-sellers, revistas e suas músicas favoritas sem descontar da banda.</p>
+                        </div>
+                        <div class="flex items-center justify-between border-t border-blue-400/30 pt-8">
+                            <div class="flex text-4xl text-white gap-4">
+                                <i class="fa-solid fa-book-open text-blue-200"></i>
+                                <i class="fa-brands fa-deezer text-blue-200"></i>
+                            </div>
+                            <a href="planos.html" class="bg-white text-[#0050FF] font-bold px-8 py-3 rounded-xl hover:bg-slate-100 transition-colors">Saber Mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOVA SEÇÃO: GALERIA DE INFRAESTRUTURA E CONFIANÇA -->
+    <section class="py-24 px-8 bg-slate-100 border-t border-slate-200">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-[#0050FF] font-bold tracking-widest uppercase text-sm mb-4 block">Por dentro da Alares</span>
+                <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-6">Pessoas e Tecnologia em <span class="text-[#FF6B00]">Sintonia</span></h2>
+                <p class="text-xl text-slate-600 font-medium max-w-3xl mx-auto">Nosso compromisso está na rua todos os dias. Conheça um pouco da estrutura que sustenta a sua conexão.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="md:col-span-2 h-[400px] rounded-[2.5rem] overflow-hidden relative group shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=80" alt="Data Center Alares" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
+                    <h3 class="absolute bottom-8 left-8 text-2xl font-black text-white">Data Centers Próprios</h3>
+                </div>
+                <div class="h-[400px] rounded-[2.5rem] overflow-hidden relative group shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80" alt="Técnico de Fibra Óptica" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
+                    <h3 class="absolute bottom-8 left-8 text-2xl font-black text-white">Técnicos Especializados</h3>
+                </div>
+                <div class="h-[400px] rounded-[2.5rem] overflow-hidden relative group shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&q=80" alt="Atendimento ao Cliente" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
+                    <h3 class="absolute bottom-8 left-8 text-2xl font-black text-white">Suporte Humanizado</h3>
+                </div>
+                <div class="md:col-span-2 h-[400px] rounded-[2.5rem] overflow-hidden relative group shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80" alt="Equipe de Engenharia NOC" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
+                    <h3 class="absolute bottom-8 left-8 text-2xl font-black text-white">NOC: Monitoramento 24/7</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- A REVOLUÇÃO DO WI-FI 6 E TECNOLOGIA -->
+    <section class="py-32 px-8 bg-slate-900 text-white relative overflow-hidden">
+        <div class="absolute left-0 top-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#0050FF] rounded-full blur-[200px] opacity-20 pointer-events-none"></div>
+        
+        <div class="max-w-[1440px] mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
+            <div class="relative flex justify-center lg:justify-start">
+                <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80" alt="Tecnologia Roteador Wi-Fi 6 Alares" class="rounded-[3rem] shadow-2xl border border-slate-100 relative z-10 w-full max-w-md object-cover h-[500px]">
+                <div class="absolute -bottom-10 -right-10 glass-panel p-8 rounded-3xl border border-slate-200 shadow-2xl z-20">
+                    <div class="text-5xl font-black text-gradient-alares mb-1">Wi-Fi 6</div>
+                    <div class="text-slate-800 font-bold uppercase tracking-widest text-sm">Padrão AX Integrado</div>
+                </div>
+            </div>
+
+            <div>
+                <span class="bg-[#FF6B00]/10 text-[#FF6B00] px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-widest mb-6 inline-block border border-white/10">Engenharia de Ponta</span>
+                <h2 class="text-4xl md:text-6xl font-black mb-8 leading-tight text-white">A rede construída para o <span class="text-[#0050FF]">futuro.</span></h2>
+                <p class="text-xl text-slate-400 mb-8 leading-relaxed font-medium">
+                    A velocidade que chega no cabo precisa fluir pelo ar. Com a tecnologia Wi-Fi 6 presente em nossos novos equipamentos, garantimos uma experiência surreal de navegação.
+                </p>
+                <ul class="space-y-6 mb-10">
+                    <li class="flex items-start gap-5 glass-panel-dark p-6 rounded-2xl hover-lift">
+                        <div class="w-14 h-14 bg-[#0050FF]/20 rounded-xl flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-gauge-high text-[#0050FF] text-2xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-white mb-1">Mais velocidade, menos atraso</h4>
+                            <p class="text-slate-400">Latência reduzida em até 75% comparado ao Wi-Fi 5, perfeito para jogos e videochamadas.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-5 glass-panel-dark p-6 rounded-2xl hover-lift">
+                        <div class="w-14 h-14 bg-[#FF6B00]/20 rounded-xl flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-mobile-screen-button text-[#FF6B00] text-2xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-white mb-1">Múltiplos aparelhos conectados</h4>
+                            <p class="text-slate-400">A tecnologia OFDMA gerencia dezenas de conexões ao mesmo tempo sem criar gargalos na rede.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEGURANÇA E PRIVACIDADE (NÍVEL ENGENHARIA) -->
+    <section class="py-24 px-8 bg-slate-900 text-white relative border-t border-white/10">
+        <div class="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center justify-between gap-12 glass-panel-dark p-12 rounded-[3rem]">
+            <div class="md:w-1/2">
+                <i class="fa-solid fa-shield-halved text-6xl text-green-400 mb-6"></i>
+                <h2 class="text-3xl md:text-5xl font-black mb-6">Proteção de Dados em Nível <span class="text-green-400">Corporativo</span>.</h2>
+                <p class="text-lg text-slate-300 leading-relaxed mb-6">
+                    Na Alares, a segurança da sua rede não é opcional. Operamos sob rígidos protocolos de segurança da informação, com conformidade total à <strong>LGPD</strong> e monitoramento anti-fraude ativo.
+                </p>
+                <a href="#" class="text-green-400 font-bold text-lg hover:underline decoration-2 underline-offset-4">Ver Política de Privacidade Completa <i class="fa-solid fa-arrow-right text-sm"></i></a>
+            </div>
+            <div class="md:w-1/2 grid grid-cols-2 gap-6">
+                <div class="bg-white/5 border border-white/10 p-6 rounded-2xl text-center">
+                    <i class="fa-solid fa-lock text-3xl text-[#0050FF] mb-4"></i>
+                    <h4 class="font-bold">Criptografia End-to-End</h4>
+                </div>
+                <div class="bg-white/5 border border-white/10 p-6 rounded-2xl text-center">
+                    <i class="fa-solid fa-user-shield text-3xl text-[#FF6B00] mb-4"></i>
+                    <h4 class="font-bold">Acesso Protegido</h4>
+                </div>
+                <div class="bg-white/5 border border-white/10 p-6 rounded-2xl text-center">
+                    <i class="fa-solid fa-server text-3xl text-green-400 mb-4"></i>
+                    <h4 class="font-bold">NOC Anti-DDoS</h4>
+                </div>
+                <div class="bg-white/5 border border-white/10 p-6 rounded-2xl text-center">
+                    <i class="fa-solid fa-file-contract text-3xl text-purple-400 mb-4"></i>
+                    <h4 class="font-bold">Auditoria Contínua</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPARATIVO ALARES VS. INTERNET COMUM -->
+    <section class="py-24 px-8 bg-white border-b border-slate-200">
+        <div class="max-w-[1000px] mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-6">Por que somos <span class="text-[#0050FF]">diferentes?</span></h2>
+                <p class="text-xl text-slate-600 font-medium">Veja a diferença técnica entre a infraestrutura Alares e provedores convencionais.</p>
+            </div>
+
+            <div class="bg-white rounded-[2rem] shadow-2xl border border-slate-100 overflow-hidden">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-slate-50 border-b border-slate-200">
+                            <th class="p-6 text-slate-500 font-bold uppercase tracking-widest text-sm w-1/3">Recurso</th>
+                            <th class="p-6 text-slate-400 font-bold text-center w-1/3 border-l border-slate-200">Internet Comum</th>
+                            <th class="p-6 text-[#0050FF] font-black text-center text-xl w-1/3 border-l border-slate-200 bg-blue-50">Fibra Alares</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-slate-700 font-medium">
+                        <tr class="border-b border-slate-100 hover:bg-slate-50">
+                            <td class="p-6">Tecnologia da Rede</td>
+                            <td class="p-6 text-center text-slate-500">Cabos Misto / Metálico</td>
+                            <td class="p-6 text-center text-green-600 font-bold bg-blue-50/30">100% Fibra Óptica (FTTH)</td>
+                        </tr>
+                        <tr class="border-b border-slate-100 hover:bg-slate-50">
+                            <td class="p-6">Taxa de Upload</td>
+                            <td class="p-6 text-center text-red-400">Geralmente 10% do Download <i class="fa-solid fa-xmark ml-2"></i></td>
+                            <td class="p-6 text-center text-green-600 font-bold bg-blue-50/30">Totalmente Simétrica <i class="fa-solid fa-check ml-2"></i></td>
+                        </tr>
+                        <tr class="border-b border-slate-100 hover:bg-slate-50">
+                            <td class="p-6">Equipamento Wi-Fi</td>
+                            <td class="p-6 text-center text-slate-500">Wi-Fi 4 ou 5 Básico</td>
+                            <td class="p-6 text-center text-green-600 font-bold bg-blue-50/30">Wi-Fi 6 de Alta Potência <i class="fa-solid fa-check ml-2"></i></td>
+                        </tr>
+                        <tr class="border-b border-slate-100 hover:bg-slate-50">
+                            <td class="p-6">Latência (Ping)</td>
+                            <td class="p-6 text-center text-slate-500">Instável em horários de pico</td>
+                            <td class="p-6 text-center text-green-600 font-bold bg-blue-50/30">Otimizada para E-Sports <i class="fa-solid fa-check ml-2"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="p-6">Suporte Técnico</td>
+                            <td class="p-6 text-center text-slate-500">Horário Comercial Lento</td>
+                            <td class="p-6 text-center text-green-600 font-bold bg-blue-50/30">Atendimento 24/7 + NOC <i class="fa-solid fa-check ml-2"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- ECOSSISTEMA DE SERVIÇOS EXPANDIDO (COM IMAGENS) -->
+    <section class="py-32 px-8 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-6xl font-black text-slate-900 mb-6">Feito para o seu <span class="text-[#0050FF]">Estilo de Vida</span></h2>
+                <p class="text-xl text-slate-600 max-w-3xl mx-auto font-medium">Nossa infraestrutura foi desenhada para se adaptar à sua demanda crítica. Não importa o tamanho do desafio.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Card Residencial com Imagem -->
+                <div class="glass-panel bg-white rounded-[2.5rem] border border-slate-200 hover-lift group overflow-hidden flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1517502884422-41eaead166d4?auto=format&fit=crop&w=600&q=80" alt="Casa" class="w-full h-48 object-cover">
+                    <div class="p-10 flex-1 flex flex-col">
+                        <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#0050FF] transition-colors -mt-16 shadow-lg border-4 border-white relative z-10">
+                            <i class="fa-solid fa-house-chimney text-2xl text-[#0050FF] group-hover:text-white transition-colors"></i>
+                        </div>
+                        <h3 class="text-3xl font-black text-slate-800 mb-4">Alares Casa</h3>
+                        <p class="text-slate-600 text-lg mb-8 leading-relaxed flex-1">Conecte toda a família simultaneamente. Streaming na sala, redes sociais no quarto e segurança total na sua rede Wi-Fi.</p>
+                        <a href="planos.html" class="text-[#0050FF] font-bold text-lg flex items-center gap-2 group-hover:gap-4 transition-all">Ver Planos <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card Gamer com Imagem -->
+                <div class="glass-panel rounded-[2.5rem] border border-slate-200 hover-lift group bg-slate-900 shadow-2xl relative overflow-hidden flex flex-col">
+                    <div class="absolute top-4 right-4 bg-purple-600 text-white text-xs font-black px-3 py-1 rounded-full uppercase tracking-widest border border-purple-400 z-20 shadow-lg">Extreme</div>
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80" alt="Gamer" class="w-full h-48 object-cover opacity-80 mix-blend-luminosity group-hover:mix-blend-normal transition-all">
+                    <div class="p-10 flex-1 flex flex-col relative z-10">
+                        <div class="w-16 h-16 bg-slate-800 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-purple-600 transition-colors -mt-16 shadow-lg border-4 border-slate-900 relative z-10">
+                            <i class="fa-solid fa-gamepad text-2xl text-purple-400 group-hover:text-white transition-colors"></i>
+                        </div>
+                        <h3 class="text-3xl font-black text-white mb-4">Alares Gaming</h3>
+                        <p class="text-slate-400 text-lg mb-8 leading-relaxed flex-1">Rotas otimizadas, ping cravado e estabilidade absoluta. O cenário perfeito para quem compete e precisa que cada milissegundo conte.</p>
+                        <a href="planos.html" class="text-purple-400 font-bold text-lg flex items-center gap-2 group-hover:gap-4 transition-all">Dominar a Partida <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card Corporativo com Imagem -->
+                <div class="glass-panel bg-white rounded-[2.5rem] border border-slate-200 hover-lift group overflow-hidden flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80" alt="Empresas" class="w-full h-48 object-cover">
+                    <div class="p-10 flex-1 flex flex-col">
+                        <div class="w-16 h-16 bg-amber-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#FF6B00] transition-colors -mt-16 shadow-lg border-4 border-white relative z-10">
+                            <i class="fa-solid fa-building-shield text-2xl text-[#FF6B00] group-hover:text-white transition-colors"></i>
+                        </div>
+                        <h3 class="text-3xl font-black text-slate-800 mb-4">Alares Empresas</h3>
+                        <p class="text-slate-600 text-lg mb-8 leading-relaxed flex-1">Link dedicado, IP Fixo e SLA rigoroso. Infraestrutura desenhada sob medida para garantir que a sua operação não pare um segundo sequer.</p>
+                        <a href="b2b.html" class="text-[#FF6B00] font-bold text-lg flex items-center gap-2 group-hover:gap-4 transition-all">Falar com Consultor <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO APP / AUTOATENDIMENTO INTACTA -->
+    <section class="py-32 px-8 bg-white relative overflow-hidden">
+        <div class="max-w-[1440px] mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
+            <div class="order-2 lg:order-1 relative flex justify-center hover-lift">
+                <div class="absolute inset-0 bg-[#0050FF]/10 rounded-full blur-[100px]"></div>
+                <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=80" alt="App Alares" class="relative z-10 rounded-[3rem] shadow-2xl border-8 border-slate-100 transform -rotate-3 transition-transform duration-700 w-3/4">
+            </div>
+
+            <div class="order-1 lg:order-2">
+                <div class="inline-flex items-center gap-2 bg-[#FF6B00]/10 px-4 py-2 rounded-full mb-6">
+                    <i class="fa-brands fa-app-store-ios text-[#FF6B00]"></i>
+                    <i class="fa-brands fa-google-play text-[#FF6B00]"></i>
+                    <span class="text-sm font-bold tracking-widest uppercase text-[#FF6B00] ml-2">Baixe Nosso App Oficial</span>
+                </div>
+                <h2 class="text-4xl md:text-6xl font-black text-slate-900 mb-8 leading-tight">
+                    O controle da sua rede, <span class="text-[#0050FF]">na palma da mão.</span>
+                </h2>
+                <p class="text-xl text-slate-600 mb-10 leading-relaxed font-medium">
+                    Esqueça ligações demoradas. Com o app Alares, você emite a segunda via da sua fatura em PDF ou copia o PIX Copia e Cola, muda a senha do Wi-Fi e abre chamados em poucos toques.
+                </p>
+                <div class="space-y-6 mb-10">
+                    <div class="flex items-center gap-4 text-lg font-bold text-slate-800 glass-panel p-4 rounded-xl">
+                        <div class="w-12 h-12 bg-white rounded-xl shadow-sm border border-slate-100 flex items-center justify-center text-[#0050FF]"><i class="fa-solid fa-file-invoice"></i></div>
+                        Faturas e Pagamentos via PIX Integrado
+                    </div>
+                    <div class="flex items-center gap-4 text-lg font-bold text-slate-800 glass-panel p-4 rounded-xl">
+                        <div class="w-12 h-12 bg-white rounded-xl shadow-sm border border-slate-100 flex items-center justify-center text-[#0050FF]"><i class="fa-solid fa-wifi"></i></div>
+                        Gestão Completa de Dispositivos e Senhas
+                    </div>
+                </div>
+                <a href="suporte.html" class="inline-block bg-slate-900 hover:bg-black text-white font-black px-10 py-5 rounded-2xl transition-all shadow-[0_15px_30px_-10px_rgba(0,0,0,0.5)] text-lg">
+                    Acessar Área do Cliente
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MEGA FOOTER PADRÃO PARA TODAS AS PÁGINAS -->
+    <footer class="bg-slate-950 text-slate-400 pt-24 pb-10 border-t border-white/10 relative overflow-hidden">
+        <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#0050FF] via-[#0035A8] to-[#FF6B00]"></div>
+        <div class="absolute right-0 top-0 w-[500px] h-[500px] bg-[#0050FF]/5 rounded-full blur-[150px] pointer-events-none"></div>
+        
+        <div class="max-w-[1440px] mx-auto px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16 relative z-10">
+            <div class="lg:col-span-2">
+                <div class="text-4xl font-black tracking-tighter text-white mb-6">alares</div>
+                <p class="text-lg leading-relaxed mb-8 max-w-sm">Levando internet de ultravelocidade, tecnologia e conectividade corporativa premium para o desenvolvimento da sua casa e empresa no Brasil inteiro.</p>
+                <div class="flex items-center gap-4">
+                    <a href="#" class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center hover:bg-[#0050FF] hover:text-white transition-all text-xl" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center hover:bg-[#0050FF] hover:text-white transition-all text-xl" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-lg mb-6 uppercase tracking-widest">Para Você</h4>
+                <ul class="space-y-4 font-medium">
+                    <li><a href="planos.html" class="hover:text-white hover:pl-2 transition-all">Planos de Internet</a></li>
+                    <li><a href="suporte.html" class="hover:text-white hover:pl-2 transition-all">2ª Via de Fatura</a></li>
+                    <li><a href="suporte.html" class="hover:text-white hover:pl-2 transition-all">App Alares</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-lg mb-6 uppercase tracking-widest">A Empresa</h4>
+                <ul class="space-y-4 font-medium">
+                    <li><a href="sobre.html" class="hover:text-white hover:pl-2 transition-all">Nossa História & ESG</a></li>
+                    <li><a href="cobertura.html" class="hover:text-white hover:pl-2 transition-all">Rede e Cobertura</a></li>
+                    <li><a href="b2b.html" class="hover:text-white hover:pl-2 transition-all">Alares Empresas</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-lg mb-6 uppercase tracking-widest">Atendimento</h4>
+                <ul class="space-y-4 font-medium">
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-phone text-[#0050FF] mt-1"></i><div><span class="block text-white font-bold">SAC / Ouvidoria</span>106 00</div></li>
+                    <li class="flex items-start gap-3"><i class="fa-brands fa-whatsapp text-green-500 mt-1 text-lg"></i><div><span class="block text-white font-bold">WhatsApp Oficial</span>(11) 99999-9999</div></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-[1440px] mx-auto px-8 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm font-medium relative z-10">
+            <p>&copy; 2026 Alares Internet S.A. Todos os direitos reservados. Fundo Grain Management.</p>
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-white transition-colors">Termos de Uso</a>
+                <a href="#" class="hover:text-white transition-colors">Aviso de Privacidade LGPD</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WIDGET FLUTUANTE INTACTO -->
+    <div class="fixed bottom-8 right-8 z-[100] flex flex-col gap-4">
+        <button id="btn-back-to-top" class="w-12 h-12 bg-slate-800 text-white rounded-full shadow-xl flex items-center justify-center hover:bg-[#0050FF] hover:-translate-y-1 transition-all opacity-0 pointer-events-none translate-y-4 duration-300" aria-label="Voltar ao Topo">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+        <a href="suporte.html" class="w-16 h-16 bg-gradient-to-r from-green-400 to-green-600 text-white rounded-full shadow-2xl flex items-center justify-center text-3xl hover:scale-110 hover:shadow-[0_0_20px_rgba(74,222,128,0.6)] transition-all relative group" aria-label="Fale no WhatsApp">
+            <div class="absolute inset-0 bg-green-500 rounded-full animate-ping opacity-20"></div>
+            <i class="fa-brands fa-whatsapp relative z-10"></i>
+        </a>
+    </div>
+
+    <!-- SCRIPT GERAL -->
+    <script src="./script.js"></script>
+
+    <!-- SCRIPT ESPECÍFICO DO CARROSSEL (LÓGICA ISOLADA E ROBUSTA) -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const track = document.getElementById('carousel-track');
+            const slides = track ? Array.from(track.children) : [];
+            const nextButton = document.getElementById('next-slide');
+            const prevButton = document.getElementById('prev-slide');
+            const dotsNav = document.getElementById('carousel-indicators');
+            const dots = dotsNav ? Array.from(dotsNav.children) : [];
+            
+            if(!track || slides.length === 0) return;
+
+            let currentIndex = 0;
+            let autoPlayInterval;
+
+            const updateCarousel = (index) => {
+                track.style.transform = `translateX(-${index * 33.333}%)`;
+                dots.forEach(dot => {
+                    dot.classList.remove('bg-white', 'scale-125');
+                    dot.classList.add('bg-white/50');
+                });
+                if(dots[index]) {
+                    dots[index].classList.remove('bg-white/50');
+                    dots[index].classList.add('bg-white', 'scale-125');
+                }
+            };
+
+            const nextSlide = () => {
+                currentIndex = (currentIndex + 1) % slides.length;
+                updateCarousel(currentIndex);
+            };
+
+            const prevSlide = () => {
+                currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                updateCarousel(currentIndex);
+            };
+
+            const startAutoPlay = () => {
+                autoPlayInterval = setInterval(nextSlide, 5000);
+            };
+
+            const stopAutoPlay = () => {
+                clearInterval(autoPlayInterval);
+            };
+
+            if(nextButton) nextButton.addEventListener('click', () => { stopAutoPlay(); nextSlide(); startAutoPlay(); });
+            if(prevButton) prevButton.addEventListener('click', () => { stopAutoPlay(); prevSlide(); startAutoPlay(); });
+            
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    stopAutoPlay();
+                    currentIndex = index;
+                    updateCarousel(currentIndex);
+                    startAutoPlay();
+                });
+            });
+
+            // Inicia o carrossel na posição 0
+            updateCarousel(0);
+            startAutoPlay();
+        });
+    </script>
+</body>
+</html>
