@@ -1,33 +1,36 @@
 /* ==========================================================================
-   ALARES - DESIGN SYSTEM & ENGENHARIA DE UI
-   Versão: 3.0 (Enterprise Edition - Arquitetura Completa)
-   Descrição: Folha de estilos global com suporte a Glassmorphism, 
-   animações de entrada triunfal e variáveis nativas do ecossistema Alares.
+   ALARES - DESIGN SYSTEM & ENGENHARIA DE UI ULTRA PREMIUM
+   Versão: 4.0 (Majestic Enterprise Edition)
+   Descrição: Folha de estilos global otimizada para alta performance, 
+   renderização cinematográfica, Glassmorphism avançado e tipografia limpa.
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 /* =========================================
    1. VARIÁVEIS GLOBAIS (DESIGN TOKENS)
    ========================================= */
 :root {
-    /* Paleta Oficial Alares */
+    /* Paleta Oficial Alares - Cores Vibrantes e Limpas */
     --alares-blue: #0050FF;
-    --alares-dark-blue: #0035A8;
+    --alares-dark-blue: #002D8B;
     --alares-orange: #FF6B00;
-    --alares-orange-hover: #e66000;
-    --alares-dark: #0f172a;
-    --alares-light: #f8fafc;
+    --alares-orange-hover: #E65A00;
     
-    /* Efeitos Globais e Glassmorphism */
-    --glass-bg: rgba(255, 255, 255, 0.85);
-    --glass-border: rgba(255, 255, 255, 0.4);
-    --glass-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+    /* Tons de Nobreza e Fundo Escuro */
+    --alares-dark: #070B14; /* Azul escuro quase preto, extremamente premium */
+    --alares-light: #F8FAFC;
+    --alares-gold: #F59E0B;
     
-    /* Variáveis Corporativas Dark Mode (B2B) */
-    --glass-bg-dark: rgba(15, 23, 42, 0.75);
-    --glass-border-dark: rgba(255, 255, 255, 0.08);
-    --glass-shadow-dark: inset 0 0 20px rgba(255, 255, 255, 0.02);
+    /* Efeitos Globais e Glassmorphism Cinematico (Estilo macOS) */
+    --glass-bg: rgba(255, 255, 255, 0.75);
+    --glass-border: rgba(255, 255, 255, 0.5);
+    --glass-shadow: 0 30px 60px -15px rgba(0, 30, 80, 0.08);
+    
+    /* Variáveis Corporativas Dark Mode (B2B / Extreme) */
+    --glass-bg-dark: rgba(7, 11, 20, 0.65);
+    --glass-border-dark: rgba(255, 255, 255, 0.06);
+    --glass-shadow-dark: 0 40px 80px -20px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 /* =========================================
@@ -35,14 +38,23 @@
    ========================================= */
 html {
     scroll-behavior: smooth;
+    /* Renderização de fonte perfeita em telas de alta resolução (Retina/4K) */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     overflow-x: hidden;
     background-color: var(--alares-light);
+    color: #1E293B;
+}
+
+/* Melhoria na cor da seleção de texto para combinar com a marca */
+::selection {
+    background-color: var(--alares-blue);
+    color: #FFFFFF;
 }
 
 /* =========================================
@@ -54,7 +66,9 @@ body {
     left: 0;
     width: 0%;
     height: 4px;
-    background: linear-gradient(90deg, var(--alares-blue), var(--alares-orange));
+    /* Gradiente majestoso que brilha no topo */
+    background: linear-gradient(90deg, var(--alares-blue), var(--alares-orange), var(--alares-gold));
+    box-shadow: 0 0 15px rgba(255, 107, 0, 0.5);
     z-index: 1000;
     transition: width 0.1s ease-out;
     border-top-right-radius: 4px;
@@ -62,52 +76,54 @@ body {
 }
 
 /* =========================================
-   4. KEYFRAMES DE ANIMAÇÃO (A MÁGICA VISUAL)
+   4. KEYFRAMES DE ANIMAÇÃO (CINEMATOGRÁFICAS)
    ========================================= */
 
-/* A Entrada Triunfal Principal - Exigência de Alto Impacto */
+/* A Entrada Triunfal Suprema - Com leve rotação 3D para impacto monumental */
 @keyframes triumphantEntry {
     0% {
         opacity: 0;
-        transform: scale(0.92) translateY(60px);
-        filter: blur(12px);
+        transform: scale(0.88) translateY(80px) rotateX(10deg);
+        filter: blur(16px);
     }
     100% {
         opacity: 1;
-        transform: scale(1) translateY(0);
+        transform: scale(1) translateY(0) rotateX(0deg);
         filter: blur(0);
     }
 }
 
-/* Entrada Lateral Pesada (Para Cards, Painéis e Imagens) */
+/* Entrada Lateral Pesada e Limpa */
 @keyframes slideInRightHeavy {
     0% {
         opacity: 0;
-        transform: translateX(80px) scale(0.95);
+        transform: translateX(100px) scale(0.95);
+        filter: blur(8px);
     }
     100% {
         opacity: 1;
         transform: translateX(0) scale(1);
+        filter: blur(0);
     }
 }
 
-/* Efeito de Flutuação Suave (Para Mockups e Cards em Destaque) */
+/* Efeito de Flutuação Orgânico e Suave */
 @keyframes floatElement {
     0%, 100% { 
-        transform: translateY(0); 
+        transform: translateY(0) rotate(0deg); 
     }
     50% { 
-        transform: translateY(-15px); 
+        transform: translateY(-18px) rotate(0.5deg); 
     }
 }
 
-/* Efeito de Pulso Luminoso (Para Botões de Call to Action e Ofertas) */
+/* Efeito de Pulso Luminoso Majestoso */
 @keyframes glowPulse {
     0%, 100% { 
-        box-shadow: 0 0 20px rgba(0, 80, 255, 0.3); 
+        box-shadow: 0 0 25px rgba(0, 80, 255, 0.2); 
     }
     50% { 
-        box-shadow: 0 0 40px rgba(0, 80, 255, 0.6); 
+        box-shadow: 0 0 50px rgba(0, 80, 255, 0.6); 
     }
 }
 
@@ -115,85 +131,113 @@ body {
    5. CLASSES UTILITÁRIAS DE ANIMAÇÃO
    ========================================= */
 
-/* Utilizando curvas de aceleração Bezier para movimentos premium */
+/* Curvas Bezier (0.16, 1, 0.3, 1) criam uma desaceleração dramática e luxuosa no final do movimento */
 .animate-triumphant {
-    animation: triumphantEntry 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation: triumphantEntry 1.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    transform-origin: center bottom;
 }
 
 .animate-slide-heavy {
-    animation: slideInRightHeavy 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation: slideInRightHeavy 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .animate-float {
-    animation: floatElement 6s ease-in-out infinite;
+    animation: floatElement 7s ease-in-out infinite;
+}
+
+.glow-effect {
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .glow-effect:hover {
-    animation: glowPulse 2s infinite;
+    animation: glowPulse 2.5s infinite;
+    transform: translateY(-3px) scale(1.02);
 }
 
 /* =========================================
-   6. ESTILOS CORPORATIVOS AVANÇADOS E TEXTURAS
+   6. ESTILOS CORPORATIVOS E TEXTURAS PREMIUM
    ========================================= */
 
 /* Gradiente de Texto Exclusivo Alares */
 .text-gradient-alares {
-    background: linear-gradient(135deg, var(--alares-blue) 0%, var(--alares-dark-blue) 50%, var(--alares-orange) 100%);
+    background: linear-gradient(135deg, var(--alares-blue) 0%, var(--alares-dark-blue) 40%, var(--alares-orange) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
-/* Fundo Tecnológico Mesh (Malha de Pontos Gradientes) */
+/* Fundo Tecnológico Mesh (Malha Suave e Grandiosa) */
 .mesh-bg {
     background-color: var(--alares-dark);
     background-image: 
-        radial-gradient(at 0% 0%, rgba(0, 80, 255, 0.2) 0px, transparent 50%),
-        radial-gradient(at 100% 100%, rgba(255, 107, 0, 0.15) 0px, transparent 50%);
+        radial-gradient(circle at 15% 10%, rgba(0, 80, 255, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 85% 90%, rgba(255, 107, 0, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(245, 158, 11, 0.05) 0%, transparent 60%);
 }
 
 /* =========================================
-   7. GLASSMORPHISM (EFEITO DE VIDRO FOSCO)
+   7. GLASSMORPHISM AVANÇADO (EFEITO VIDRO)
    ========================================= */
 
-/* Painel de Vidro Claro (Para Home, Planos e Suporte) */
+/* Painel de Vidro Claro (Super Limpo, saturação aumentada para vivacidade) */
 .glass-panel {
     background: var(--glass-bg);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(28px) saturate(180%);
+    -webkit-backdrop-filter: blur(28px) saturate(180%);
     border: 1px solid var(--glass-border);
     box-shadow: var(--glass-shadow);
+    border-radius: 2.5rem;
 }
 
-/* Painel de Vidro Escuro (Para B2B Corporativo e Heros) */
+/* Painel de Vidro Escuro (Profundo e Majestoso) */
 .glass-panel-dark {
     background: var(--glass-bg-dark);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
-    border: var(--glass-border-dark);
+    backdrop-filter: blur(32px) saturate(150%);
+    -webkit-backdrop-filter: blur(32px) saturate(150%);
+    border: 1px solid var(--glass-border-dark);
     box-shadow: var(--glass-shadow-dark);
+    border-radius: 2.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Um leve reflexo no topo do vidro escuro para dar sensação de realeza e materialidade */
+.glass-panel-dark::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+    z-index: 1;
 }
 
 /* =========================================
-   8. MICROINTERAÇÕES (HOVER EFFECTS)
+   8. MICROINTERAÇÕES GRANDIOSAS
    ========================================= */
 
-/* Elevação Suave ao passar o mouse em Cards de Serviço */
+/* Elevação majestosa em Cards (Planos, Soluções, Serviços) */
 .hover-lift {
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
 }
 
 .hover-lift:hover {
-    transform: translateY(-8px) scale(1.01);
-    box-shadow: 0 30px 60px -12px rgba(0, 80, 255, 0.15);
+    transform: translateY(-12px) scale(1.015);
+    box-shadow: 0 40px 80px -15px rgba(0, 30, 100, 0.15);
+}
+
+.glass-panel-dark.hover-lift:hover {
+    box-shadow: 0 40px 80px -15px rgba(0, 0, 0, 0.9), 0 0 30px rgba(245, 158, 11, 0.1);
+    border-color: rgba(245, 158, 11, 0.3); /* Um toque sutil de dourado ao passar o mouse */
 }
 
 /* =========================================
-   9. CUSTOM SCROLLBAR (BARRA DE ROLAGEM)
+   9. CUSTOM SCROLLBAR DE ALTO NÍVEL
    ========================================= */
 
 ::-webkit-scrollbar { 
-    width: 12px; 
+    width: 10px; /* Mais fino e elegante */
 }
 
 ::-webkit-scrollbar-track { 
@@ -201,11 +245,11 @@ body {
 }
 
 ::-webkit-scrollbar-thumb { 
-    background: linear-gradient(var(--alares-blue), var(--alares-dark-blue));
-    border-radius: 6px; 
-    border: 3px solid var(--alares-dark); 
+    background: linear-gradient(180deg, var(--alares-blue), var(--alares-dark-blue));
+    border-radius: 10px; 
+    border: 2px solid var(--alares-dark); /* Cria o efeito de "padding" nativo */
 }
 
 ::-webkit-scrollbar-thumb:hover { 
-    background: var(--alares-orange); 
+    background: linear-gradient(180deg, var(--alares-orange), var(--alares-orange-hover));
 }
