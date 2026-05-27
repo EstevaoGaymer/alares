@@ -3,312 +3,374 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alares | Planos de Internet Fibra</title>
+    <meta name="description" content="Assine a internet fibra óptica da Alares. Planos de 400 Mega a 1 Giga com Wi-Fi 6, Max, Deezer e Skeelo.">
+    <title>Alares | Planos de Internet Fibra Óptica</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./style.css">
 </head>
-<body class="bg-slate-50 text-slate-900 overflow-x-hidden">
+<body class="bg-slate-50 text-slate-900 overflow-x-hidden selection:bg-[#0050FF] selection:text-white">
 
-    <!-- MEGA HEADER PREMIUM INTACTO -->
-    <nav class="fixed w-full z-[100] bg-white/90 backdrop-blur-md border-b border-blue-100 shadow-sm transition-all duration-300">
+    <!-- MEGA HEADER PREMIUM -->
+    <nav class="fixed w-full z-[100] bg-white/90 backdrop-blur-md border-b border-blue-100 shadow-sm transition-all duration-300" aria-label="Navegação Principal">
         <div class="max-w-[1440px] mx-auto px-8 h-24 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-3">
-                <div class="text-4xl font-black tracking-tighter text-[#0050FF]">alares</div>
+            <a href="index.html" class="flex items-center gap-3 group cursor-pointer" aria-label="Página Inicial Alares">
+                <div class="text-4xl font-black tracking-tighter text-[#0050FF] group-hover:text-[#0035A8] transition-colors">alares</div>
                 <div class="hidden sm:block h-8 w-px bg-slate-300"></div>
-                <span class="hidden sm:block text-xs font-bold text-slate-500 tracking-widest uppercase">Para Você</span>
+                <span class="hidden sm:block text-xs font-bold text-slate-500 tracking-widest uppercase bg-slate-100 px-3 py-1 rounded-full border border-slate-200">Portal Oficial</span>
             </a>
 
-            <div class="hidden lg:flex items-center gap-12 font-semibold text-slate-600">
+            <div class="hidden lg:flex items-center gap-10 font-semibold text-slate-600">
                 <a href="index.html" class="hover:text-[#0050FF] transition-colors">Início</a>
                 <a href="planos.html" class="text-[#0050FF]">Planos Residenciais</a>
-                <a href="b2b.html" class="hover:text-[#0050FF] transition-colors">Empresas</a>
-                <a href="cobertura.html" class="hover:text-[#0050FF] transition-colors">Cobertura</a>
+                <a href="b2b.html" class="hover:text-[#0050FF] transition-colors">Para Empresas</a>
+                <a href="cobertura.html" class="hover:text-[#0050FF] transition-colors">Nossa Cobertura</a>
+                <a href="sobre.html" class="hover:text-[#0050FF] transition-colors">Institucional</a>
             </div>
 
             <div class="flex items-center gap-6">
                 <a href="suporte.html" class="hidden md:flex items-center gap-2 text-slate-700 hover:text-[#0050FF] transition font-bold">
-                    <i class="fa-regular fa-user"></i> Central do Assinante
+                    <i class="fa-regular fa-user-circle text-xl"></i> Área do Cliente
                 </a>
-                <button class="bg-gradient-to-r from-[#0050FF] to-blue-600 hover:from-blue-600 hover:to-blue-800 text-white px-8 py-3.5 rounded-full font-black shadow-lg shadow-blue-500/30 transition-all transform hover:scale-105">
-                    Assinar via WhatsApp
-                </button>
+                <a href="#planos-ancora" class="bg-gradient-to-r from-[#FF6B00] to-[#e66000] hover:shadow-[0_0_25px_rgba(255,107,0,0.4)] text-white px-8 py-3.5 rounded-full font-black transition-all transform hover:scale-105 flex items-center gap-2">
+                    Assine Já <i class="fa-solid fa-bolt"></i>
+                </a>
             </div>
         </div>
     </nav>
 
-    <!-- HERO SECTION PLANOS (ENTRADA TRIUNFAL INTACTA) -->
-    <section class="pt-40 pb-20 px-8 relative overflow-hidden bg-gradient-to-b from-blue-50 to-slate-50">
-        <div class="absolute top-0 right-1/4 w-[800px] h-[800px] bg-blue-400/10 rounded-full blur-[150px] pointer-events-none"></div>
+    <!-- HERO DE PLANOS: ENTRADA TRIUNFAL E MESH BACKGROUND -->
+    <section class="pt-40 pb-32 px-8 relative overflow-hidden mesh-bg text-white">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1614064641913-6b7140414f70?auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center opacity-10 mix-blend-screen"></div>
+        <div class="absolute top-0 right-1/4 w-[800px] h-[800px] bg-[#0050FF]/30 rounded-full blur-[180px] pointer-events-none"></div>
+
         <div class="max-w-[1440px] mx-auto text-center relative z-10 animate-triumphant">
-            <h1 class="text-5xl md:text-7xl font-black text-slate-900 mb-6 tracking-tight">
-                A velocidade que a sua <br class="hidden md:block">
-                casa sempre mereceu.
+            <div class="inline-flex items-center gap-3 glass-panel-dark border border-white/20 px-5 py-2 rounded-full mb-8">
+                <i class="fa-solid fa-rocket text-[#FF6B00] animate-pulse"></i>
+                <span class="text-sm font-bold tracking-widest uppercase text-white">Velocidade e Estabilidade</span>
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-black text-white leading-[1.05] mb-8 tracking-tight">
+                Escolha o plano que vai <br> mudar a sua <span class="text-gradient-alares drop-shadow-2xl">conexão.</span>
             </h1>
-            <p class="text-xl text-slate-600 max-w-3xl mx-auto font-medium mb-12">
-                100% Fibra Óptica. Wi-Fi de alta potência incluso. Sem surpresas na fatura. Escolha o plano perfeito para maratonar séries, jogar online e trabalhar de casa.
+            
+            <p class="text-xl text-slate-300 max-w-2xl mx-auto font-medium mb-12 leading-relaxed">
+                Nossos pacotes foram desenhados para todos os tamanhos de família e níveis de exigência. Instalação grátis, Wi-Fi potente e aplicativos de conteúdo inclusos.
             </p>
+
+            <div class="flex justify-center gap-6 animate-float">
+                <div class="flex items-center gap-3 bg-white/5 border border-white/10 px-6 py-3 rounded-2xl backdrop-blur-md">
+                    <i class="fa-solid fa-check text-green-400 text-xl"></i>
+                    <span class="font-bold text-lg">Sem Franquia de Dados</span>
+                </div>
+                <div class="flex items-center gap-3 bg-white/5 border border-white/10 px-6 py-3 rounded-2xl backdrop-blur-md">
+                    <i class="fa-solid fa-check text-green-400 text-xl"></i>
+                    <span class="font-bold text-lg">Wi-Fi Incluso</span>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- GRID DE PLANOS GIGANTE INTACTO -->
-    <section class="py-12 px-8 relative z-20 -mt-10">
-        <div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-end">
+    <!-- GRID DE PLANOS COLOSSAL (OFERTAS) -->
+    <section id="planos-ancora" class="py-24 px-8 relative z-20 -mt-16">
+        <div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
             
-            <!-- Plano 300 Mega -->
-            <div class="glass-panel rounded-[2.5rem] p-10 flex flex-col transition-all hover:-translate-y-4 hover:shadow-2xl border border-slate-200">
-                <h3 class="text-2xl font-black text-slate-800 mb-2">Alares Start</h3>
-                <p class="text-slate-500 font-medium mb-6">Para o dia a dia e redes sociais.</p>
-                <div class="flex items-end gap-2 mb-8 border-b border-slate-200 pb-8">
-                    <span class="text-6xl font-black text-[#0050FF]">300</span>
-                    <span class="text-2xl font-bold text-slate-400 mb-1">Mega</span>
+            <!-- PLANO 1: ESSENCIAL -->
+            <div class="glass-panel bg-white p-10 rounded-[3rem] shadow-xl border border-slate-200 hover-lift flex flex-col relative animate-slide-heavy">
+                <div class="mb-8 border-b border-slate-100 pb-8">
+                    <span class="bg-slate-100 text-slate-600 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-6 inline-block border border-slate-200">Ideal para o dia a dia</span>
+                    <h3 class="text-3xl font-black text-slate-900 mb-2">Alares Start</h3>
+                    <div class="flex items-start gap-2 text-[#0050FF]">
+                        <span class="text-6xl font-black tracking-tighter">400</span>
+                        <span class="text-2xl font-bold mt-2">Mega</span>
+                    </div>
                 </div>
-                <ul class="space-y-4 mb-10 flex-grow">
-                    <li class="flex items-center gap-4 text-slate-700 font-medium"><i class="fa-solid fa-check-circle text-green-500 text-xl"></i> Wi-Fi Grátis</li>
-                    <li class="flex items-center gap-4 text-slate-700 font-medium"><i class="fa-solid fa-check-circle text-green-500 text-xl"></i> Fibra até o modem</li>
-                    <li class="flex items-center gap-4 text-slate-700 font-medium"><i class="fa-solid fa-check-circle text-green-500 text-xl"></i> Instalação em 48h</li>
-                </ul>
-                <button class="w-full py-4 rounded-2xl border-2 border-[#0050FF] text-[#0050FF] font-black text-lg hover:bg-[#0050FF] hover:text-white transition-all">Quero 300 Mega</button>
-            </div>
-
-            <!-- Plano 600 Mega -->
-            <div class="glass-panel rounded-[2.5rem] p-12 flex flex-col transform scale-105 shadow-2xl border-2 border-[#FF6B00] relative z-10 bg-white">
-                <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#FF6B00] to-orange-500 text-white px-6 py-1.5 rounded-full text-sm font-black uppercase tracking-widest shadow-lg">
-                    Mais Assinado
-                </div>
-                <h3 class="text-3xl font-black text-slate-900 mb-2">Alares Ultra</h3>
-                <p class="text-slate-500 font-medium mb-6">A escolha ideal para a família inteira conectada.</p>
-                <div class="flex items-end gap-2 mb-8 border-b border-slate-100 pb-8">
-                    <span class="text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#0050FF] to-blue-400">600</span>
-                    <span class="text-3xl font-bold text-slate-400 mb-2">Mega</span>
-                </div>
-                <ul class="space-y-5 mb-10 flex-grow">
-                    <li class="flex items-center gap-4 text-slate-800 font-bold"><i class="fa-solid fa-bolt text-[#FF6B00] text-2xl"></i> Roteador Wi-Fi 6 Incluso</li>
-                    <li class="flex items-center gap-4 text-slate-700 font-medium"><i class="fa-solid fa-check-circle text-green-500 text-2xl"></i> Streaming em 4K sem travar</li>
-                    <li class="flex items-center gap-4 text-slate-700 font-medium"><i class="fa-solid fa-check-circle text-green-500 text-2xl"></i> Download e Upload simétricos</li>
-                    <li class="flex items-center gap-4 text-slate-700 font-medium"><i class="fa-solid fa-gamepad text-purple-500 text-2xl"></i> Ping otimizado para jogos</li>
-                </ul>
-                <button class="w-full py-5 rounded-2xl bg-[#0050FF] text-white font-black text-xl hover:bg-blue-700 transition-all shadow-xl shadow-blue-500/40 glow-effect">Assinar 600 Mega Agora</button>
-            </div>
-
-            <!-- Plano 1 Giga -->
-            <div class="glass-panel rounded-[2.5rem] p-10 flex flex-col transition-all hover:-translate-y-4 hover:shadow-2xl border border-slate-200">
-                <h3 class="text-2xl font-black text-slate-800 mb-2">Alares Extreme</h3>
-                <p class="text-slate-500 font-medium mb-6">Para criadores de conteúdo e gamers hardcore.</p>
-                <div class="flex items-end gap-2 mb-8 border-b border-slate-200 pb-8">
-                    <span class="text-6xl font-black text-slate-900">1</span>
-                    <span class="text-2xl font-bold text-slate-400 mb-1">Giga</span>
-                </div>
-                <ul class="space-y-4 mb-10 flex-grow">
-                    <li class="flex items-center gap-4 text-slate-700 font-medium"><i class="fa-solid fa-check-circle text-green-500 text-xl"></i> Roteador Wi-Fi 6 Mesh</li>
-                    <li class="flex items-center gap-4 text-slate-700 font-medium"><i class="fa-solid fa-check-circle text-green-500 text-xl"></i> Suporte Prioritário VIP</li>
-                    <li class="flex items-center gap-4 text-slate-700 font-medium"><i class="fa-solid fa-check-circle text-green-500 text-xl"></i> Múltiplos dispositivos (30+)</li>
-                </ul>
-                <button class="w-full py-4 rounded-2xl bg-slate-900 text-white font-black text-lg hover:bg-black transition-all">Quero 1 Giga</button>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- NOVA SEÇÃO: CALCULADORA INTERATIVA DE INTERNET -->
-    <section class="py-24 px-8 bg-[#0050FF] text-white relative overflow-hidden">
-        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
-        <div class="max-w-[1440px] mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
-            
-            <div class="animate-slide-heavy">
-                <span class="bg-blue-800 text-blue-200 px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-widest mb-6 inline-block">Descubra sua necessidade</span>
-                <h2 class="text-4xl md:text-5xl font-black mb-6 leading-tight">Não sabe qual plano escolher? <br> Deixa com a gente.</h2>
-                <p class="text-xl text-blue-100 mb-10 leading-relaxed">
-                    Selecione abaixo os hábitos de consumo da sua casa e o nosso algoritmo recomendará a velocidade perfeita para que você nunca sofra com travamentos.
-                </p>
-            </div>
-
-            <!-- Painel Interativo de Cálculo -->
-            <div class="bg-white p-10 rounded-[2.5rem] shadow-2xl text-slate-900 animate-slide-heavy">
-                <h3 class="text-2xl font-black mb-6 border-b border-slate-100 pb-4">O que você mais faz na internet?</h3>
                 
-                <div class="space-y-4 mb-8">
-                    <!-- Opção 1 -->
-                    <label class="flex items-center justify-between p-4 border border-slate-200 rounded-2xl cursor-pointer hover:bg-slate-50 transition-colors group">
-                        <div class="flex items-center gap-4">
-                            <i class="fa-brands fa-youtube text-3xl text-red-500"></i>
-                            <span class="font-bold text-lg">Assistir Filmes e Séries em 4K</span>
-                        </div>
-                        <input type="checkbox" value="200" class="calc-checkbox w-6 h-6 accent-[#0050FF] cursor-pointer">
-                    </label>
-                    
-                    <!-- Opção 2 -->
-                    <label class="flex items-center justify-between p-4 border border-slate-200 rounded-2xl cursor-pointer hover:bg-slate-50 transition-colors group">
-                        <div class="flex items-center gap-4">
-                            <i class="fa-solid fa-gamepad text-3xl text-purple-500"></i>
-                            <span class="font-bold text-lg">Jogar Online Competitivamente</span>
-                        </div>
-                        <input type="checkbox" value="300" class="calc-checkbox w-6 h-6 accent-[#0050FF] cursor-pointer">
-                    </label>
-
-                    <!-- Opção 3 -->
-                    <label class="flex items-center justify-between p-4 border border-slate-200 rounded-2xl cursor-pointer hover:bg-slate-50 transition-colors group">
-                        <div class="flex items-center gap-4">
-                            <i class="fa-solid fa-laptop-code text-3xl text-blue-500"></i>
-                            <span class="font-bold text-lg">Trabalho Remoto e Reuniões</span>
-                        </div>
-                        <input type="checkbox" value="100" class="calc-checkbox w-6 h-6 accent-[#0050FF] cursor-pointer">
-                    </label>
-                </div>
-
-                <!-- Resultado Dinâmico -->
-                <div class="bg-slate-50 rounded-2xl p-6 text-center border border-slate-100">
-                    <p class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-2">Recomendação do Sistema</p>
-                    <div class="flex items-end justify-center gap-2 mb-2">
-                        <span id="resultado-megas" class="text-5xl font-black text-[#0050FF] transition-all">300</span>
-                        <span class="text-2xl font-bold text-slate-400 mb-1">Mega</span>
+                <div class="mb-8">
+                    <div class="flex items-end gap-1 mb-2">
+                        <span class="text-lg font-bold text-slate-500">R$</span>
+                        <span class="text-5xl font-black text-slate-900">79</span>
+                        <span class="text-xl font-bold text-slate-500">,90/mês</span>
                     </div>
-                    <p id="resultado-texto" class="text-slate-600 font-medium">Este é o plano Alares Start. Perfeito para manter a estabilidade nas suas conexões do dia a dia!</p>
+                    <p class="text-sm text-slate-500 font-medium">*No débito em conta</p>
                 </div>
+
+                <ul class="space-y-4 mb-10 flex-1 text-slate-700 font-medium text-lg">
+                    <li class="flex items-center gap-4"><i class="fa-solid fa-check-circle text-green-500 text-xl"></i> Download e Upload Simétricos</li>
+                    <li class="flex items-center gap-4"><i class="fa-solid fa-check-circle text-green-500 text-xl"></i> Roteador Dual Band (2.4 e 5Ghz)</li>
+                    <li class="flex items-center gap-4"><i class="fa-solid fa-check-circle text-green-500 text-xl"></i> Skeelo (Livros Digitais)</li>
+                    <li class="flex items-center gap-4"><i class="fa-solid fa-check-circle text-green-500 text-xl"></i> Instalação Grátis</li>
+                </ul>
+
+                <button class="w-full bg-slate-100 hover:bg-[#0050FF] hover:text-white text-[#0050FF] border border-slate-200 font-black px-8 py-5 rounded-2xl transition-all text-lg flex items-center justify-center gap-2">
+                    Assinar Agora <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <!-- PLANO 2: MAIS VENDIDO (DESTAQUE) -->
+            <div class="glass-panel bg-white p-10 rounded-[3rem] shadow-[0_30px_60px_-15px_rgba(0,80,255,0.3)] border-2 border-[#0050FF] hover-lift flex flex-col relative transform md:-translate-y-8 z-10 animate-triumphant">
+                <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#0050FF] to-[#FF6B00] text-white px-6 py-2 rounded-full text-sm font-black uppercase tracking-widest shadow-lg whitespace-nowrap">
+                    A Escolha da Maioria
+                </div>
+
+                <div class="mb-8 border-b border-slate-100 pb-8 pt-4">
+                    <span class="bg-blue-50 text-[#0050FF] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-6 inline-block border border-blue-200">Família & Streaming</span>
+                    <h3 class="text-3xl font-black text-slate-900 mb-2">Alares Plus + Max</h3>
+                    <div class="flex items-start gap-2 text-[#FF6B00]">
+                        <span class="text-6xl font-black tracking-tighter">700</span>
+                        <span class="text-2xl font-bold mt-2">Mega</span>
+                    </div>
+                </div>
+                
+                <div class="mb-8">
+                    <div class="flex items-end gap-1 mb-2">
+                        <span class="text-lg font-bold text-slate-500">R$</span>
+                        <span class="text-5xl font-black text-slate-900">109</span>
+                        <span class="text-xl font-bold text-slate-500">,90/mês</span>
+                    </div>
+                    <p class="text-sm text-slate-500 font-medium">*No débito em conta</p>
+                </div>
+
+                <ul class="space-y-4 mb-10 flex-1 text-slate-700 font-medium text-lg">
+                    <li class="flex items-center gap-4"><i class="fa-solid fa-check-circle text-[#0050FF] text-xl"></i> Download e Upload Simétricos</li>
+                    <li class="flex items-center gap-4"><i class="fa-solid fa-check-circle text-[#0050FF] text-xl"></i> Roteador Wi-Fi 6 de Alta Potência</li>
+                    <li class="flex items-center gap-4 bg-slate-50 p-2 rounded-xl border border-slate-100"><img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Max_logo.svg" alt="Max" class="h-6"> <span class="font-bold">Incluso no plano</span></li>
+                    <li class="flex items-center gap-4"><i class="fa-brands fa-deezer text-[#0050FF] text-xl"></i> Deezer Premium Integrado</li>
+                    <li class="flex items-center gap-4"><i class="fa-solid fa-check-circle text-[#0050FF] text-xl"></i> Instalação Prioritária Grátis</li>
+                </ul>
+
+                <button class="w-full bg-[#0050FF] hover:bg-[#0035A8] text-white font-black px-8 py-5 rounded-2xl transition-all shadow-[0_10px_20px_rgba(0,80,255,0.4)] text-lg flex items-center justify-center gap-2">
+                    Assinar Agora <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <!-- PLANO 3: ELITE GAMER (REALEZA B2C - CUSTOMIZADO) -->
+            <div class="glass-panel-dark bg-gradient-to-b from-slate-900 to-slate-950 p-10 rounded-[3rem] shadow-2xl border border-amber-500/30 hover-lift flex flex-col relative overflow-hidden animate-slide-heavy group">
+                <div class="absolute top-0 right-0 w-40 h-40 bg-amber-500/10 rounded-bl-full blur-2xl"></div>
+                
+                <div class="mb-8 border-b border-white/10 pb-8">
+                    <div class="flex items-center gap-2 bg-amber-500/20 text-amber-400 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-6 inline-block border border-amber-500/30">
+                        <i class="fa-solid fa-crown"></i> Majestic Elite
+                    </div>
+                    <h3 class="text-3xl font-black text-white mb-2">Alares Extreme</h3>
+                    <div class="flex items-start gap-2 text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-amber-600">
+                        <span class="text-6xl font-black tracking-tighter">1</span>
+                        <span class="text-2xl font-bold mt-2">Giga</span>
+                    </div>
+                </div>
+                
+                <div class="mb-8">
+                    <div class="flex items-end gap-1 mb-2 text-white">
+                        <span class="text-lg font-bold text-slate-400">R$</span>
+                        <span class="text-5xl font-black text-white">149</span>
+                        <span class="text-xl font-bold text-slate-400">,90/mês</span>
+                    </div>
+                    <p class="text-sm text-amber-400 font-medium opacity-80">*No débito em conta</p>
+                </div>
+
+                <ul class="space-y-4 mb-10 flex-1 text-slate-300 font-medium text-lg relative z-10">
+                    <li class="flex items-center gap-4"><i class="fa-solid fa-bolt text-amber-500 text-xl"></i> Ping Otimizado para E-Sports</li>
+                    <li class="flex items-center gap-4"><i class="fa-solid fa-crosshairs text-amber-500 text-xl"></i> Rotas Diretas Riot Games (VALORANT)</li>
+                    <li class="flex items-center gap-4"><i class="fa-solid fa-microchip text-amber-500 text-xl"></i> Roteador Wi-Fi 6 Mesh Tri-Band</li>
+                    <li class="flex items-center gap-4"><i class="fa-solid fa-film text-amber-500 text-xl"></i> Todos os Streamings (Max + Deezer)</li>
+                    <li class="flex items-center gap-4"><i class="fa-solid fa-headset text-amber-500 text-xl"></i> Suporte VIP Exclusivo</li>
+                </ul>
+
+                <button class="w-full bg-gradient-to-r from-amber-400 to-amber-600 hover:from-amber-300 hover:to-amber-500 text-slate-950 font-black px-8 py-5 rounded-2xl transition-all shadow-[0_0_30px_rgba(245,158,11,0.3)] text-lg flex items-center justify-center gap-2 group-hover:scale-105">
+                    Forjar sua Conexão <i class="fa-solid fa-arrow-right"></i>
+                </button>
             </div>
 
         </div>
     </section>
 
-    <!-- LÓGICA JAVASCRIPT DA CALCULADORA EMBUTIDA -->
-    <script>
-        const checkboxes = document.querySelectorAll('.calc-checkbox');
-        const resultadoMegas = document.getElementById('resultado-megas');
-        const resultadoTexto = document.getElementById('resultado-texto');
-
-        checkboxes.forEach(box => {
-            box.addEventListener('change', () => {
-                let soma = 300; // Base
-                checkboxes.forEach(b => {
-                    if(b.checked) soma += parseInt(b.value);
-                });
-
-                // Atualiza o número
-                if(soma >= 900) {
-                    resultadoMegas.innerText = "1 Giga";
-                    resultadoMegas.nextElementSibling.style.display = "none";
-                    resultadoTexto.innerText = "Alares Extreme! Você exige o máximo da internet. Este plano garante fluidez absoluta para múltiplos aparelhos pesados.";
-                } else if(soma >= 500) {
-                    resultadoMegas.innerText = "600";
-                    resultadoMegas.nextElementSibling.style.display = "inline";
-                    resultadoTexto.innerText = "Alares Ultra. Excelente escolha! O equilíbrio perfeito entre altíssima velocidade e capacidade para a família toda.";
-                } else {
-                    resultadoMegas.innerText = "300";
-                    resultadoMegas.nextElementSibling.style.display = "inline";
-                    resultadoTexto.innerText = "Alares Start. Perfeito para manter a estabilidade nas suas conexões do dia a dia com muita economia!";
-                }
-            });
-        });
-    </script>
-
-    <!-- NOVA SEÇÃO: PROVA SOCIAL E DEPOIMENTOS GIGANTES -->
-    <section class="py-24 px-8 bg-slate-50">
-        <div class="max-w-[1440px] mx-auto text-center">
-            <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-16">O que nossos <span class="text-[#0050FF]">assinantes dizem</span></h2>
+    <!-- SEÇÃO: A EXPERIÊNCIA DO WI-FI 6 E GAMING -->
+    <section class="py-32 px-8 bg-white border-t border-slate-200">
+        <div class="max-w-[1440px] mx-auto grid lg:grid-cols-2 gap-16 items-center">
             
+            <div class="relative rounded-[3rem] overflow-hidden shadow-2xl hover-lift h-[600px] border border-slate-100">
+                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1000&q=80" alt="Gamer de Alta Performance" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/30 to-transparent"></div>
+                <div class="absolute bottom-10 left-10 right-10">
+                    <div class="glass-panel-dark border border-white/20 p-6 rounded-2xl backdrop-blur-md text-white flex items-center justify-between">
+                        <div>
+                            <div class="text-sm font-bold text-amber-400 uppercase tracking-widest mb-1">Ping Médio (SP/MG)</div>
+                            <div class="text-3xl font-black">4ms - 9ms</div>
+                        </div>
+                        <i class="fa-solid fa-gamepad text-5xl text-white/20"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <span class="bg-[#0050FF]/10 text-[#0050FF] px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-widest mb-6 inline-block border border-[#0050FF]/20">Performance Inigualável</span>
+                <h2 class="text-4xl md:text-6xl font-black text-slate-900 mb-8 leading-tight">
+                    Arquitetura desenhada para quem não aceita <span class="text-[#FF6B00]">perder.</span>
+                </h2>
+                <p class="text-xl text-slate-600 mb-10 leading-relaxed font-medium">
+                    A velocidade que você contrata na fibra precisa fluir pelo ar sem interferências. Nossa engenharia de rede une o poderoso Wi-Fi 6 a rotas diretas para os maiores data centers do mundo.
+                </p>
+
+                <div class="space-y-8">
+                    <div class="flex items-start gap-6 glass-panel p-6 rounded-2xl hover-lift transition-colors">
+                        <div class="w-16 h-16 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center shrink-0 border border-purple-100 text-3xl">
+                            <i class="fa-solid fa-crosshairs"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-bold text-slate-900 mb-2">Vantagem Competitiva</h4>
+                            <p class="text-slate-600 text-lg">Nosso backbone possui conexões diretas (peering) com os servidores da Riot Games e Valve, garantindo uma resposta instantânea nas suas partidas ranqueadas de VALORANT e CS2.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-6 glass-panel p-6 rounded-2xl hover-lift transition-colors">
+                        <div class="w-16 h-16 bg-blue-50 text-[#0050FF] rounded-2xl flex items-center justify-center shrink-0 border border-blue-100 text-3xl">
+                            <i class="fa-solid fa-house-signal"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-bold text-slate-900 mb-2">Cobertura Wi-Fi 6 Mesh</h4>
+                            <p class="text-slate-600 text-lg">Acabe com os pontos cegos. A tecnologia Mesh espalha o sinal de forma inteligente por toda a casa, mantendo a mesma velocidade em qualquer cômodo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE PARCEIROS DE CONTEÚDO (STREAMINGS) -->
+    <section class="py-24 px-8 bg-slate-950 text-white relative border-t border-white/10 overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-30"></div>
+        
+        <div class="max-w-[1440px] mx-auto text-center relative z-10">
+            <h2 class="text-4xl md:text-5xl font-black mb-6">O melhor do entretenimento, <span class="text-amber-400">incluso na fatura.</span></h2>
+            <p class="text-xl text-slate-400 font-medium max-w-3xl mx-auto mb-16">Na Alares, você não assina apenas internet. Você leva um hub completo de diversão para a família inteira sem pagar a mais por isso.</p>
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-10 rounded-[2rem] shadow-lg border border-slate-100 text-left relative">
-                    <i class="fa-solid fa-quote-right text-6xl text-blue-50 absolute top-6 right-6 z-0"></i>
-                    <div class="relative z-10">
-                        <div class="flex text-amber-400 mb-6 text-xl">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="text-lg text-slate-600 mb-8 font-medium">"Eu trabalho de home office e jogo nas horas vagas. O plano de 600 Mega resolveu minha vida. O ping no Valorant é o mais baixo que já tive e nunca sofro com oscilações durante as calls do trabalho."</p>
-                        <div class="flex items-center gap-4">
-                            <div class="w-14 h-14 bg-slate-200 rounded-full bg-[url('https://randomuser.me/api/portraits/men/32.jpg')] bg-cover"></div>
-                            <div>
-                                <h4 class="font-bold text-slate-900">Thiago Silva</h4>
-                                <p class="text-sm text-slate-500">Cliente há 2 anos</p>
-                            </div>
-                        </div>
+                <div class="glass-panel-dark p-10 rounded-[2.5rem] border border-white/10 hover-lift flex flex-col items-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Max_logo.svg" alt="Max Logo" class="h-16 mb-8 filter drop-shadow-lg">
+                    <h4 class="text-2xl font-bold mb-4">Filmes e Séries Premium</h4>
+                    <p class="text-slate-400 mb-6">Acesse o catálogo completo da antiga HBO Max. House of the Dragon, The Last of Us, Champions League ao vivo e muito mais.</p>
+                    <span class="text-sm font-bold text-amber-400 uppercase tracking-widest mt-auto border border-amber-400/30 px-4 py-1 rounded-full">Plano 700 Mega+</span>
+                </div>
+
+                <div class="glass-panel-dark p-10 rounded-[2.5rem] border border-white/10 hover-lift flex flex-col items-center">
+                    <i class="fa-brands fa-deezer text-6xl text-white mb-8 filter drop-shadow-lg"></i>
+                    <h4 class="text-2xl font-bold mb-4">Deezer Premium</h4>
+                    <p class="text-slate-400 mb-6">Mais de 90 milhões de faixas, podcasts exclusivos e áudio em alta fidelidade. Sem anúncios e com modo offline liberado.</p>
+                    <span class="text-sm font-bold text-amber-400 uppercase tracking-widest mt-auto border border-amber-400/30 px-4 py-1 rounded-full">Todos os Planos</span>
+                </div>
+
+                <div class="glass-panel-dark p-10 rounded-[2.5rem] border border-white/10 hover-lift flex flex-col items-center">
+                    <i class="fa-solid fa-book-open-reader text-6xl text-[#FF6B00] mb-8 filter drop-shadow-lg"></i>
+                    <h4 class="text-2xl font-bold mb-4">Skeelo E-books</h4>
+                    <p class="text-slate-400 mb-6">Receba um best-seller digital todo mês. Leia no celular, tablet ou e-reader onde e quando quiser com o app Skeelo.</p>
+                    <span class="text-sm font-bold text-amber-400 uppercase tracking-widest mt-auto border border-amber-400/30 px-4 py-1 rounded-full">Todos os Planos</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ ESPECÍFICO DE PLANOS (Acordeão) -->
+    <section class="py-32 px-8 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-[1000px] mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-6">Ficou com alguma dúvida?</h2>
+                <p class="text-xl text-slate-600 font-medium">Tudo o que você precisa saber antes de se tornar parte da família Alares.</p>
+            </div>
+            
+            <div class="space-y-6">
+                <div class="faq-item bg-white border border-slate-200 rounded-2xl shadow-sm hover:shadow-lg transition-all overflow-hidden">
+                    <div class="faq-question flex items-center justify-between p-8 cursor-pointer bg-white select-none">
+                        <h4 class="text-xl font-bold text-slate-800">Os planos possuem franquia de limite de dados?</h4>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-xl transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer hidden p-8 pt-0 text-slate-600 text-lg leading-relaxed bg-white border-t border-slate-100">
+                        <strong>Não!</strong> Todos os planos residenciais da Alares são 100% ilimitados. Você pode jogar, assistir filmes em 4K, fazer downloads pesados e trabalhar o mês inteiro sem se preocupar com bloqueios ou redução de velocidade.
                     </div>
                 </div>
 
-                <div class="bg-white p-10 rounded-[2rem] shadow-lg border border-slate-100 text-left relative">
-                    <i class="fa-solid fa-quote-right text-6xl text-blue-50 absolute top-6 right-6 z-0"></i>
-                    <div class="relative z-10">
-                        <div class="flex text-amber-400 mb-6 text-xl">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="text-lg text-slate-600 mb-8 font-medium">"Instalação super rápida! Os técnicos foram extremamente educados, passaram a fibra direitinho e deixaram o Wi-Fi 6 configurado. A internet pega na casa toda com muita força."</p>
-                        <div class="flex items-center gap-4">
-                            <div class="w-14 h-14 bg-slate-200 rounded-full bg-[url('https://randomuser.me/api/portraits/women/44.jpg')] bg-cover"></div>
-                            <div>
-                                <h4 class="font-bold text-slate-900">Mariana Costa</h4>
-                                <p class="text-sm text-slate-500">Plano Alares Giga</p>
-                            </div>
-                        </div>
+                <div class="faq-item bg-white border border-slate-200 rounded-2xl shadow-sm hover:shadow-lg transition-all overflow-hidden">
+                    <div class="faq-question flex items-center justify-between p-8 cursor-pointer bg-white select-none">
+                        <h4 class="text-xl font-bold text-slate-800">O roteador Wi-Fi é emprestado ou eu preciso comprar?</h4>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-xl transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer hidden p-8 pt-0 text-slate-600 text-lg leading-relaxed bg-white border-t border-slate-100">
+                        O equipamento roteador de alta performance (Dual Band ou Wi-Fi 6, dependendo do plano) é cedido em regime de <strong>comodato</strong>. Isso significa que ele é emprestado gratuitamente enquanto você for nosso cliente, e nós damos total garantia e suporte técnico sobre ele.
                     </div>
                 </div>
 
-                <div class="bg-white p-10 rounded-[2rem] shadow-lg border border-slate-100 text-left relative">
-                    <i class="fa-solid fa-quote-right text-6xl text-blue-50 absolute top-6 right-6 z-0"></i>
-                    <div class="relative z-10">
-                        <div class="flex text-amber-400 mb-6 text-xl">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="text-lg text-slate-600 mb-8 font-medium">"Cancelei a operadora antiga porque toda chuva a internet caía. Com a Alares isso acabou. A estabilidade impressiona. Sem falar no aplicativo que é muito fácil de usar para pegar a fatura."</p>
-                        <div class="flex items-center gap-4">
-                            <div class="w-14 h-14 bg-slate-200 rounded-full bg-[url('https://randomuser.me/api/portraits/men/62.jpg')] bg-cover"></div>
-                            <div>
-                                <h4 class="font-bold text-slate-900">Carlos Roberto</h4>
-                                <p class="text-sm text-slate-500">Plano Alares Start</p>
-                            </div>
-                        </div>
+                <div class="faq-item bg-white border border-slate-200 rounded-2xl shadow-sm hover:shadow-lg transition-all overflow-hidden">
+                    <div class="faq-question flex items-center justify-between p-8 cursor-pointer bg-white select-none">
+                        <h4 class="text-xl font-bold text-slate-800">Quanto tempo demora a instalação após a assinatura?</h4>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-xl transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer hidden p-8 pt-0 text-slate-600 text-lg leading-relaxed bg-white border-t border-slate-100">
+                        Prezamos pela agilidade. Na grande maioria das cidades atendidas, nossa equipe técnica realiza a instalação e configuração da sua rede em até <strong>48 horas úteis</strong> após a aprovação do cadastro.
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- MEGA FOOTER INTACTO -->
+    <!-- MEGA FOOTER PADRÃO PARA TODAS AS PÁGINAS -->
     <footer class="bg-slate-950 text-slate-400 pt-24 pb-10 border-t border-white/10 relative overflow-hidden">
-        <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#0050FF] via-blue-400 to-[#FF6B00]"></div>
+        <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#0050FF] via-[#0035A8] to-[#FF6B00]"></div>
+        <div class="absolute right-0 top-0 w-[500px] h-[500px] bg-[#0050FF]/5 rounded-full blur-[150px] pointer-events-none"></div>
         
         <div class="max-w-[1440px] mx-auto px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16 relative z-10">
             <div class="lg:col-span-2">
                 <div class="text-4xl font-black tracking-tighter text-white mb-6">alares</div>
-                <p class="text-lg leading-relaxed mb-8 max-w-sm">Levando internet de ultravelocidade, tecnologia e conectividade premium para o desenvolvimento da sua casa e empresa no Brasil inteiro.</p>
+                <p class="text-lg leading-relaxed mb-8 max-w-sm">Levando internet de ultravelocidade, tecnologia corporativa premium e o melhor entretenimento para o desenvolvimento da sua casa e empresa no Brasil inteiro.</p>
+                <div class="flex items-center gap-4">
+                    <a href="#" class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center hover:bg-[#0050FF] hover:text-white transition-all text-xl" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center hover:bg-[#0050FF] hover:text-white transition-all text-xl" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
             </div>
             <div>
                 <h4 class="text-white font-bold text-lg mb-6 uppercase tracking-widest">Para Você</h4>
                 <ul class="space-y-4 font-medium">
-                    <li><a href="planos.html" class="hover:text-white hover:pl-2 transition-all">Planos de Internet</a></li>
+                    <li><a href="planos.html" class="text-white font-bold hover:pl-2 transition-all">Planos de Internet</a></li>
                     <li><a href="suporte.html" class="hover:text-white hover:pl-2 transition-all">2ª Via de Fatura</a></li>
+                    <li><a href="suporte.html" class="hover:text-white hover:pl-2 transition-all">App Alares</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-white font-bold text-lg mb-6 uppercase tracking-widest">A Empresa</h4>
                 <ul class="space-y-4 font-medium">
-                    <li><a href="sobre.html" class="hover:text-white hover:pl-2 transition-all">Nossa História</a></li>
-                    <li><a href="cobertura.html" class="hover:text-white hover:pl-2 transition-all">Onde Estamos</a></li>
+                    <li><a href="sobre.html" class="hover:text-white hover:pl-2 transition-all">Nossa História & ESG</a></li>
+                    <li><a href="cobertura.html" class="hover:text-white hover:pl-2 transition-all">Rede e Cobertura</a></li>
                     <li><a href="b2b.html" class="hover:text-white hover:pl-2 transition-all">Alares Empresas</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-white font-bold text-lg mb-6 uppercase tracking-widest">Atendimento</h4>
                 <ul class="space-y-4 font-medium">
-                    <li class="flex items-start gap-3"><i class="fa-solid fa-phone text-[#0050FF] mt-1"></i><div><span class="block text-white font-bold">SAC / Suporte</span>106 00</div></li>
-                    <li class="flex items-start gap-3"><i class="fa-brands fa-whatsapp text-green-500 mt-1 text-lg"></i><div><span class="block text-white font-bold">WhatsApp Vendas</span>(11) 99999-9999</div></li>
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-phone text-[#0050FF] mt-1"></i><div><span class="block text-white font-bold">SAC / Ouvidoria</span>106 00</div></li>
+                    <li class="flex items-start gap-3"><i class="fa-brands fa-whatsapp text-green-500 mt-1 text-lg"></i><div><span class="block text-white font-bold">WhatsApp Oficial</span>(11) 99999-9999</div></li>
                 </ul>
             </div>
         </div>
-        <div class="max-w-[1440px] mx-auto px-8 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm font-medium">
-            <p>&copy; 2026 Alares Internet S.A. Todos os direitos reservados.</p>
+        <div class="max-w-[1440px] mx-auto px-8 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm font-medium relative z-10">
+            <p>&copy; 2026 Alares Internet S.A. Todos os direitos reservados. Fundo Grain Management.</p>
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-white transition-colors">Termos de Uso</a>
+                <a href="#" class="hover:text-white transition-colors">Aviso de Privacidade LGPD</a>
+            </div>
         </div>
     </footer>
 
     <!-- WIDGET FLUTUANTE INTACTO -->
     <div class="fixed bottom-8 right-8 z-[100] flex flex-col gap-4">
-        <button id="btn-back-to-top" class="w-12 h-12 bg-slate-800 text-white rounded-full shadow-xl flex items-center justify-center hover:bg-[#0050FF] hover:-translate-y-1 transition-all opacity-0 pointer-events-none translate-y-4 duration-300">
+        <button id="btn-back-to-top" class="w-12 h-12 bg-slate-800 text-white rounded-full shadow-xl flex items-center justify-center hover:bg-[#0050FF] hover:-translate-y-1 transition-all opacity-0 pointer-events-none translate-y-4 duration-300" aria-label="Voltar ao Topo">
             <i class="fa-solid fa-arrow-up"></i>
         </button>
-        <a href="suporte.html" class="w-16 h-16 bg-gradient-to-r from-green-400 to-green-600 text-white rounded-full shadow-2xl flex items-center justify-center text-3xl hover:scale-110 hover:shadow-green-500/50 transition-all relative group">
+        <a href="suporte.html" class="w-16 h-16 bg-gradient-to-r from-green-400 to-green-600 text-white rounded-full shadow-2xl flex items-center justify-center text-3xl hover:scale-110 hover:shadow-[0_0_20px_rgba(74,222,128,0.6)] transition-all relative group" aria-label="Fale no WhatsApp">
             <div class="absolute inset-0 bg-green-500 rounded-full animate-ping opacity-20"></div>
             <i class="fa-brands fa-whatsapp relative z-10"></i>
         </a>
     </div>
 
+    <!-- SCRIPT DA PÁGINA (ACORDEÃO FAQ INCLUSO NA LÓGICA BASE) -->
     <script src="./script.js"></script>
 </body>
 </html>
